@@ -3,7 +3,7 @@ import FadeIn from './FadeIn.vue'
 </script>
 
 <template>
-  <section id="contact" class="bg-gray-50 pt-24 min-h-screen">
+  <section id="contact" class="bg-gray-50 mt-10 pt-20 min-h-screen">
     <FadeIn>
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Entrer en contact</h2>
@@ -20,7 +20,7 @@ import FadeIn from './FadeIn.vue'
                   id="name"
                   name="name"
                   required
-                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  class="mt-1 py-1 px-2 block w-full rounded-md border border-gray-300 shadow-sm focus-custo"
               />
             </div>
             <!-- Champ Email -->
@@ -31,7 +31,7 @@ import FadeIn from './FadeIn.vue'
                   id="email"
                   name="email"
                   required
-                  class="mt-1 py-1 px-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  class="mt-1 py-1 px-2 block w-full rounded-md border border-gray-300 shadow-sm focus-custo "
 
               />
             </div>
@@ -43,14 +43,14 @@ import FadeIn from './FadeIn.vue'
                   name="message"
                   rows="4"
                   required
-                  class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-primary-400 focus:ring-primary-500"
+                  class="mt-1  py-1 px-2 block w-full rounded-md border border-gray-300 shadow-sm focus-custo"
               ></textarea>
             </div>
             <!-- Bouton Soumettre -->
             <div>
               <button
                   type="submit"
-                  class="w-full bg-primary-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition"
+                  class="w-full cst-bg text-white py-2 px-4 rounded-md shadow-md hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition"
               >
                 Envoyer le message
               </button>
@@ -61,3 +61,18 @@ import FadeIn from './FadeIn.vue'
     </FadeIn>
   </section>
 </template>
+
+<style scoped>
+.cst-bg {
+  background-color: #b29627;
+}
+
+.focus-custo:focus {
+
+    border-color: #b29627; /* Couleur primaire-700 */
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(140, 111, 31, 0.5); /* Optionnel */
+
+
+}
+</style>

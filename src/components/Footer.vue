@@ -6,15 +6,15 @@ const linkedinUrl = "https://github.com/CyrilUO";
 
 <template>
   <footer class="bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
       <!-- Liens vers les réseaux sociaux -->
-      <div class="flex justify-center gap-8">
+      <div class="flex justify-center gap-4">
         <!-- GitHub -->
         <a
             :href="githubUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-primary-400 transition-colors flex items-center"
+            class="custo-clr flex items-center"
         >
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const linkedinUrl = "https://github.com/CyrilUO";
             :href="linkedinUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="hover:text-primary-400 transition-colors flex items-center"
+            class="custo-clr flex items-center"
         >
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +51,35 @@ const linkedinUrl = "https://github.com/CyrilUO";
       </div>
 
       <!-- Bas de page -->
-      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-        <p>&copy; {{ currentYear }} CyrilUO </p>
-        <br />
-        <p>Tous droits réservés</p>
+      <div class="mt-8 pt-4 flex flex-wrap justify-center border-gray-800 text-center text-gray-400">
+        <div class="mr-6">
+          <p>&copy; {{ currentYear }} CyrilUO </p>
+
+        </div>
+        <div>
+          <p>Tous droits réservés</p>
+
+        </div>
       </div>
     </div>
   </footer>
 </template>
+
+<style scoped>
+.custo-clr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.custo-clr:hover {
+  transform: scale(1.010);
+  color: white;
+  opacity: 0.9;
+  box-shadow: 2px 4px 15px rgba(178, 150, 39, 0.5);
+}
+
+</style>

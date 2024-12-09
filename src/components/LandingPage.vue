@@ -143,7 +143,7 @@ onUnmounted(() => {
   display: inline-block;
   font-size: inherit;
   font-weight: inherit;
-  white-space: nowrap;
+  white-space: pre-wrap;
   overflow: hidden;
   border-right: 4px solid;
   animation: blink 0.7s step-end infinite;
@@ -159,8 +159,8 @@ onUnmounted(() => {
 }
 
 .logo {
-  height: 1em; /* Alignement avec la taille du texte */
-  width: 5em; /* Conserve les proportions */
+  height: max-content; /* Alignement avec la taille du texte */
+  width: 5rem; /* Conserve les proportions */
 }
 
 /* Cursor blink effect */
@@ -195,8 +195,10 @@ onUnmounted(() => {
 }
 
 .cst-bg:hover {
-  background-color: #e1b927; /* Slightly lighter on hover */
+  background-color: #e1b927;
 }
+
+
 </style>
 
 

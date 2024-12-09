@@ -1,21 +1,39 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
 
 const target = ref(null)
 const isVisible = ref(false)
 
-onMounted(() => {
+const setupObserver = () => {
   const { stop } = useIntersectionObserver(
       target,
       ([{ isIntersecting }]) => {
         if (isIntersecting) {
           isVisible.value = true
-          stop()
+          stop() // Arrête l'observateur une fois visible
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
   )
+}
+
+onMounted(() => {
+  setupObserver()
+
+  // Ajoutez un écouteur pour détecter les redimensionnements
+  const onResize = () => {
+    if (!isVisible.value) {
+      setupObserver() // Relance l'observateur si le contenu est invisible
+    }
+  }
+
+  window.addEventListener('resize', onResize)
+
+  // Nettoyer l'écouteur au démontage
+  onUnmounted(() => {
+    window.removeEventListener('resize', onResize)
+  })
 })
 </script>
 
