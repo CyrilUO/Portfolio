@@ -23,7 +23,6 @@ button {
   @apply font-medium text-white bg-primary-500 rounded-md py-2 px-4 hover:bg-primary-600 transition duration-200 ease-in-out;
 }
 
-/* Section globale */
 section {
   @apply py-20 px-4 sm:px-6 lg:px-8;
 }
@@ -53,18 +52,26 @@ h4, h5, h6 {
   @apply text-xl font-display text-gray-600;
 }
 
-.bg-primary-500 {
-  background-color: #3b82f6; /* Couleur principale */
+.space-mono-regular {
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.text-primary-500 {
-  color: #3b82f6;
+.space-mono-bold {
+  font-family: "Space Mono", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.text-primary-600 {
-  color: #2563eb;
+.space-mono-regular-italic {
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.bg-primary-600 {
-  background-color: #2563eb;
+.space-mono-bold-italic {
+  font-family: "Space Mono", serif;
+  font-weight: 700;
+  font-style: italic;
 }

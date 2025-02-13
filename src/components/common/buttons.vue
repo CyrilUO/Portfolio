@@ -20,7 +20,8 @@ const props = defineProps({
   label: String,    // Texte du bouton
   href: String,
   onClick: Function,// Fonction à exécuter au clic
-  download: String
+  download: String,
+  class: String
 });
 
 const emit = defineEmits(["click"]);

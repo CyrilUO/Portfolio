@@ -2,6 +2,7 @@
   "name": "uo_portfolio",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://cyriluo.github.io/Portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",

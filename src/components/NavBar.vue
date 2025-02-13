@@ -52,7 +52,7 @@ watch(isMenuOpen, (newValue) => {
               v-for="item in navigation"
               :key="item.name"
               :to="item.href"
-              class="font-extrabold hover:text-yellow-500 transition-colors duration-200"
+              class="font-mono hover:text-yellow-400 transition-colors duration-200"
           >
             {{ item.name }}
           </router-link>

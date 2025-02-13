@@ -128,7 +128,7 @@ onUnmounted(() => {
             </span>
           </template>
         </h1>
-        <p class="text-body text-gray-200 max-w-xl mx-auto mb-8 mt-5">
+        <p class="text-body space-mono-bold text-gray-200 max-w-xl mx-auto mb-8 mt-5">
           Créons ensemble des expériences web modernes et performantes.
         </p>
         <Buttons title="Entrez en contact" label="Entrons en contact" v-on:click="goToContact" ></Buttons>
@@ -199,6 +199,17 @@ onUnmounted(() => {
   background-color: #e1b927;
 }
 
+.space-mono-bold{
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 </style>
 

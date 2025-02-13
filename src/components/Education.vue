@@ -1,8 +1,8 @@
 <template>
-  <section id="education" class="relative bg-gray-300">
+  <section id="education" class="relative bg-gray-500">
     <FadeIn>
-      <div class="mx-auto bg-gray-300 my-10 pb-10 pt-5 py-10 rounded-3xl sm:px-6 lg:px-8 bx-shdw">
-        <h2 class="text-4xl font-bold text-center text-yellow-500 mb-8">
+      <div class="mx-auto bg-gray-500 pb-10 pt-5 space-mono-regular py-10 rounded-3xl sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-8 space-mono-regular-italic">
           Mon Parcours Éducatif
         </h2>
         <div class="relative">
@@ -23,8 +23,8 @@
               class="relative flex items-center mb-12 sm:mb-16 sm:z-40"
           >
             <!-- Content box -->
-            <div class="relative bg-black shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
-              <h3 class="text-lg font-bold text-yellow-500">
+            <div class="relative bg-black border-b border-white glsm shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
+              <h3 class="text-lg font-bold text-yellow-400 space-mono-regular">
                 {{ section.diploma }} {{ section.title }}
               </h3>
               <p class="mt-2 text-sm text-white"><strong>Année :</strong> {{ section.year }}</p>
@@ -130,15 +130,6 @@ onUnmounted(() => {
   .relative {
     z-index: 99;
   }
-}
-
-.bg-white {
-  z-index: 20; /* Les cartes passent au-dessus */
-}
-
-.bx-shdw {
-  box-shadow: 5px 10px 10px 0 rgba(183, 183, 183, 0.7);
-
 }
 
 

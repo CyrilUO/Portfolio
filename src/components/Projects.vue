@@ -68,19 +68,19 @@ const goToProject = (id) => {
 
 
 <template>
-  <section id="projects" class="bg-gray-100 py-24 min-h-screen">
+  <section id="projects" class="bg-gray-600 py-24">
     <FadeIn>
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-yellow-500">Réalisations</h2>
-        <p class="mt-2 text-lg text-center text-gray-600">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-5">Réalisations</h2>
+        <p class="mt-2 text-lg text-center text-white space-mono-regular-italic">
           Quelques projets professionnels - académiques - personnels
         </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
           <div
               v-for="project in projects"
               :key="project.id"
-              class="bg-white p-6 rounded-xl shadow-lg flex flex-col min-h-[450px]">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center min-h-[450px]">
+            <h3 class="text-xl font-semibold text-white space-mono-bold mb-2">
               {{ project.title }}
             </h3>
             <img
@@ -88,10 +88,10 @@ const goToProject = (id) => {
                 :alt="project.title"
                 class="h-40 w-fit object-contain rounded-md mb-4 shadow-xl"
             />
-            <p class="text-gray-600 flex-grow"> <!-- ✅ Permet au texte de prendre l'espace libre -->
+            <p class="text-white space-mono-regular flex-grow">
               {{ project.description }}
             </p>
-            <div class="flex flex-wrap gap-2 mt-3">
+            <div class="flex flex-wrap justify-start gap-2 mt-3">
               <span
                   v-for="tech in project.tech"
                   :key="tech"
@@ -100,7 +100,7 @@ const goToProject = (id) => {
                 {{ tech }}
               </span>
             </div>
-            <div class="mt-auto"> <!-- ✅ Fixe le bouton en bas -->
+            <div class="mt-4 flex justify-center py-2">
               <Buttons label="Voir le projet" @click="goToProject(project.id)"></Buttons>
             </div>
           </div>

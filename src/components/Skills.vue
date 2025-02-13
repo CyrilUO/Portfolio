@@ -55,7 +55,7 @@ const techSkills = {
 </script>
 
 <template>
-  <section id="skills" class="bg-gray-50 pt-24 min-h-screen">
+  <section id="skills" class="bg-gray-50 pt-24">
     <FadeIn>
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Compétences</h2>
