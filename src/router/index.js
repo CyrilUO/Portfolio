@@ -1,11 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import App from "@/App.vue";
+import ProjectDetail from "@/components/ProjectDetails.vue";
 
 const routes = [
-    {
-        path: "/",
-        component: App,
-    },
+    { path: "/", component: () => import("@/components/Main.vue") },
+    { path: "/projects/:id", name: "ProjectDetail", component: ProjectDetail, props: true },
 ];
 
 const router = createRouter({
@@ -15,10 +13,7 @@ const router = createRouter({
         if (savedPosition) {
             return savedPosition;
         } else if (to.hash) {
-            return {
-                el: to.hash,
-                behavior: "smooth",
-            };
+            return { el: to.hash, behavior: "smooth" };
         } else {
             return { top: 0 };
         }

@@ -35,14 +35,14 @@ watch(isMenuOpen, (newValue) => {
 });
 </script>
 <template>
-  <nav class="shadow-md fixed w-full bg-gradient-to-b from-gray-300 to-white top-0 z-50 transition-all duration-300">
+  <nav class="shadow-md fixed w-full bg-white top-0 z-50 transition-all py-2 duration-300">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between items-center">
         <div class="flex-shrink-0">
           <img
               src="../assets/images/logo-2.png"
               alt="UO-LOGO"
-              class="max-h-12 w-auto object-contain"
+              class="object-fit"
           />
         </div>
 
@@ -52,7 +52,7 @@ watch(isMenuOpen, (newValue) => {
               v-for="item in navigation"
               :key="item.name"
               :to="item.href"
-              class="text-sm font-medium hover:text-primary-700 transition-colors duration-200"
+              class="font-extrabold hover:text-yellow-500 transition-colors duration-200"
           >
             {{ item.name }}
           </router-link>
@@ -61,12 +61,12 @@ watch(isMenuOpen, (newValue) => {
         <!-- Mobile Hamburger Menu -->
         <div class="lg:hidden">
           <button
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 transition-transform duration-300"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-100 transition-transform duration-300"
               @click="toggleMenu"
           >
             <span class="sr-only">Toggle menu</span>
-            <Bars3Icon v-if="!isMenuOpen" class="block h-6 w-6" aria-hidden="true" />
-            <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
+            <Bars3Icon v-if="!isMenuOpen" class="block h-6 w-6 text-yellow-500" aria-hidden="true" />
+            <XMarkIcon v-else class="block h-6 w-6 text-yellow-500" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -114,4 +114,6 @@ button {
 button:hover {
   transform: scale(1.1);
 }
+
+
 </style>

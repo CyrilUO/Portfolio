@@ -38,7 +38,18 @@ const techSkills = {
   Outils: [
     { name: "Git", description: "Contrôle de version.", image: gitLogo, level: 90 },
     // { name: "Postman", description: "Test d'API.", image: postmanLogo, level: 85 },
-    { name: "Docker", description: "Conteneurisation.", image: dockerLogo, level: 80 },
+    { name: "Docker", description: "Conteneurisation.", image: dockerLogo, level: 80 },    { name: "Git", description: "Contrôle de version.", image: gitLogo, level: 90 },
+    // { name: "Postman", description: "Test d'API.", image: postmanLogo, level: 85 },
+    { name: "Docker", description: "Conteneurisation.", image: dockerLogo, level: 80 },    { name: "Git", description: "Contrôle de version.", image: gitLogo, level: 90 },
+    // { name: "Postman", description: "Test d'API.", image: postmanLogo, level: 85 },
+    { name: "Docker", description: "Conteneurisation.", image: dockerLogo, level: 80 }, {
+      name: "Git",
+      description: "Contrôle de version.",
+      image: gitLogo,
+      level: 90
+    },
+    // { name: "Postman", description: "Test d'API.", image: postmanLogo, level: 85 },
+    {name: "Docker", description: "Conteneurisation.", image: dockerLogo, level: 80},
   ],
 };
 </script>

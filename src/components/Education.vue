@@ -1,8 +1,8 @@
 <template>
-  <section id="education" class="relative">
+  <section id="education" class="relative bg-gray-300">
     <FadeIn>
-      <div class="mx-auto bg-gray-100 my-10 px-10 py-10 rounded-3xl sm:px-6 lg:px-8 bx-shdw">
-        <h2 class="text-4xl font-bold text-center text-primary-700 mb-8 title-relief">
+      <div class="mx-auto bg-gray-300 my-10 pb-10 pt-5 py-10 rounded-3xl sm:px-6 lg:px-8 bx-shdw">
+        <h2 class="text-4xl font-bold text-center text-yellow-500 mb-8">
           Mon Parcours Éducatif
         </h2>
         <div class="relative">
@@ -11,7 +11,7 @@
             <!-- Barre dorée dynamique -->
             <div
                 ref="goldBar"
-                class="w-full rounded-full bg-gold transition-all duration-300 opacity-0"
+                class="w-full goldBar rounded-full bg-yellow-500 transition-all duration-300 opacity-0"
             ></div>
           </div>
 
@@ -23,14 +23,14 @@
               class="relative flex items-center mb-12 sm:mb-16 sm:z-40"
           >
             <!-- Content box -->
-            <div class="relative bg-white shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
-              <h3 class="text-lg font-bold text-primary-700">
+            <div class="relative bg-black shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
+              <h3 class="text-lg font-bold text-yellow-500">
                 {{ section.diploma }} {{ section.title }}
               </h3>
-              <p class="mt-2 text-sm text-gray-600"><strong>Année :</strong> {{ section.year }}</p>
-              <p class="mt-1 text-sm text-gray-600"><strong>Université :</strong> {{ section.university }}</p>
-              <p class="mt-1 text-sm text-gray-600"><strong>Ville :</strong> {{ section.city }}</p>
-              <p v-if="section.materia" class="mt-1 text-sm text-gray-600">
+              <p class="mt-2 text-sm text-white"><strong>Année :</strong> {{ section.year }}</p>
+              <p class="mt-1 text-sm text-white"><strong>Université :</strong> {{ section.university }}</p>
+              <p class="mt-1 text-sm text-gray-100"><strong>Ville :</strong> {{ section.city }}</p>
+              <p v-if="section.materia" class="mt-1 text-sm text-white">
                 <strong>Matière :</strong> {{ section.materia }}
               </p>
             </div>
@@ -117,20 +117,11 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Couleur dorée stylisée avec relief */
-.bg-gold {
-  background: linear-gradient(135deg, #d4af37, #b29627);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  border: 1px solid #f6d96a;
-  transition: height 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Effet d'ombre amélioré */
-.bg-gold:hover {
+.goldBar:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Z-index élevé pour la barre */
 .relative {
   z-index: 0;
 }
@@ -150,20 +141,6 @@ onUnmounted(() => {
 
 }
 
-.title-relief {
-  color: #b29627; /* Couleur dorée */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), /* Ombre légère pour le relief */ -1px -1px 2px rgba(255, 255, 255, 0.2); /* Lumière douce pour le contraste */
-  font-family: 'Poppins', sans-serif; /* Ajout d'une police moderne */
-  letter-spacing: 1px; /* Espacement des lettres */
-  background: none; /* Pas de dégradé pour la simplicité */
-  -webkit-text-fill-color: #b29627; /* Remplissage couleur dorée */
-}
 
-.title-relief:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
-  -2px -2px 4px rgba(255, 255, 255, 0.3); /* Effet renforcé au survol */
-  transform: scale(1.05); /* Léger agrandissement au survol */
-  transition: all 0.3s ease; /* Transition douce */
-}
 
 </style>

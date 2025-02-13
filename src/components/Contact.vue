@@ -1,5 +1,10 @@
 <script setup>
 import FadeIn from './FadeIn.vue'
+import Buttons from "@/components/common/buttons.vue";
+
+const sendMessageTo = () => {
+
+}
 </script>
 
 <template>
@@ -11,7 +16,7 @@ import FadeIn from './FadeIn.vue'
           Parlons de vos projets
         </p>
         <div class="max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
-          <form action="#" method="POST" class="space-y-6">
+          <form onsubmit="sendMessageTo()" method="POST" class="space-y-6">
             <!-- Champ Nom -->
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
@@ -48,12 +53,7 @@ import FadeIn from './FadeIn.vue'
             </div>
             <!-- Bouton Soumettre -->
             <div>
-              <button
-                  type="submit"
-                  class="w-full cst-bg text-white py-2 px-4 rounded-md shadow-md hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition"
-              >
-                Envoyer le message
-              </button>
+              <Buttons label="Envoyez votre message" v-on:click="sendMessageTo"></Buttons>
             </div>
           </form>
         </div>

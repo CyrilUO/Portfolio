@@ -2,20 +2,25 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import FadeIn from './FadeIn.vue';
 import delawareLogo from "@/assets/images/delaware-logo.png";
+import Buttons from "@/components/common/buttons.vue";
+import router from "@/router/index.js";
 
-// Liste des contenus : texte ou image
+const goToContact = () => {
+  router.push('/#contact');
+};
+
 const contentArray = [
   { type: "text", value: "N'hésite pas à me contacter !" },
   { type: "text", value: "Bienvenue sur mon site !" },
   { type: "text", value: "Je m'appelle Cyril" },
   { type: "text", value: "Je suis développeur en alternance" },
   { type: "text-image", textBefore: "Chez", image: delawareLogo },
-  { type: "text", value: "Pour tout projet" },
 ];
 
 const currentContent = ref(contentArray[0]);
 let contentIndex = 0;
 let typingTimeout;
+let resizeCanvas; // ✅ Declare resizeCanvas globally
 
 const cycleContent = () => {
   contentIndex = (contentIndex + 1) % contentArray.length;
@@ -27,10 +32,10 @@ const cycleContent = () => {
       if (charIndex < contentArray[contentIndex].value.length) {
         currentContent.value.value += contentArray[contentIndex].value[charIndex];
         charIndex++;
-        typingTimeout = setTimeout(typeText, 100); // Typing speed
+        typingTimeout = setTimeout(typeText, 100);
       } else {
         setTimeout(() => {
-          cycleContent(); // Wait before switching to the next content
+          cycleContent();
         }, 2000);
       }
     };
@@ -38,7 +43,7 @@ const cycleContent = () => {
   } else {
     currentContent.value = contentArray[contentIndex];
     setTimeout(() => {
-      cycleContent(); // Wait before switching to the next content
+      cycleContent();
     }, 2000);
   }
 };
@@ -49,12 +54,11 @@ onMounted(() => {
   const canvas = document.getElementById('hero-bg');
   const ctx = canvas.getContext('2d');
 
-  const resizeCanvas = () => {
+  resizeCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   };
 
-  // Resize canvas on window resize
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 
@@ -87,17 +91,17 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  clearTimeout(typingTimeout);
-  window.removeEventListener('resize', resizeCanvas);
+  if (resizeCanvas) {
+    window.removeEventListener('resize', resizeCanvas);
+  }
 });
 </script>
 
+
 <template>
   <section id="home" class="h-screen relative overflow-hidden flex items-center justify-center">
-    <!-- Background container -->
     <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-800 z-0"></div>
 
-    <!-- Canvas for particles -->
     <canvas id="hero-bg" class="absolute inset-0 pointer-events-none z-0"></canvas>
 
     <!-- Content -->
@@ -127,10 +131,7 @@ onUnmounted(() => {
         <p class="text-body text-gray-200 max-w-xl mx-auto mb-8 mt-5">
           Créons ensemble des expériences web modernes et performantes.
         </p>
-        <a href="#contact"
-           class="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-md text-white cst-bg hover:text-white hover:scale-110 transition-transform duration-300">
-          Entrer en contact
-        </a>
+        <Buttons title="Entrez en contact" label="Entrons en contact" v-on:click="goToContact" ></Buttons>
       </div>
     </FadeIn>
   </section>
