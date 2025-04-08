@@ -2,8 +2,17 @@
 import { useRoute } from 'vue-router';
 import FadeIn from "@/components/FadeIn.vue";
 
-const route = useRoute();
-const pdfUrl = '/articles/react-angular-vue.pdf'; // Assure-toi que ton fichier est bien là
+import boardSkills from "@/assets/react-angular-vue.pdf"
+import Buttons from "@/components/common/buttons.vue";
+
+const downloadTech = () => {
+  const link = document.createElement('a');
+  link.href = boardSkills;
+  link.download = 'Article_Veille.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
 
 <template>
@@ -16,12 +25,8 @@ const pdfUrl = '/articles/react-angular-vue.pdf'; // Assure-toi que ton fichier 
 
       <div class="mt-6 p-6 rounded-lg shadow-lg text-white text-center">
         <h1 class="text-3xl font-bold mb-4 text-yellow-400">Comparatif : Vue.js, React, et Angular</h1>
-        <p class="text-gray-300 mb-4 italic text-center">Quel framework frontend choisir en 2024 ?</p>
-        <p class="text-white px-2" >Cliquez sur le lien de l'url pour ouvrir </p>
-        <iframe
-            :src="pdfUrl"
-            class="w-full h-[80vh] rounded-lg shadow-lg border-2 border-yellow-400 mt-4"
-        ></iframe>
+        <p class="text-gray-300 italic text-center mb-6">Quel framework frontend choisir en 2024 ?</p>
+        <Buttons label="Télécharger l'article" v-on:click="downloadTech"></Buttons>
       </div>
     </div>
   </FadeIn>

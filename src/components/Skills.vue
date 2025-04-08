@@ -22,6 +22,7 @@ import mysql from "@/assets/images/mysql.png";
 import androidStudio from "@/assets/images/Android_Studio_icon_(2023).svg.png";
 import retrofit from "@/assets/images/retrofit.png";
 import gradio from "@/assets/images/gradio-min.png";
+import FastAPI from "@/assets/images/fastapi-removebg-preview.png";
 
 // Définition des compétences
 const techSkills = {
@@ -40,6 +41,7 @@ const techSkills = {
     { name: "TailwindCSS", description: "Utilisation pour le projet web de fin de BTS", image: twindCSSLogo},
     { name: "Retrofit", description: "Appréhendé lors du projet mobile de fin d'étude de fin de BTS", image: retrofit},
     { name: "Gradio", description: "Utilisation en entreprise", image: gradio},
+    { name: "FastAPI", description: "Utilisation en entreprise et pour la création de l'application GSB mobile", image: FastAPI},
   ],
   "Outils & Environnements": [
     { name: "Intellij", description: "En entreprise dans le cadre de la méthode Agile ainsi que lors de la réalisation du projet de fin de BTS", image: intellijLogo},

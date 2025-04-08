@@ -3,16 +3,11 @@ import FadeIn from './FadeIn.vue'
 import gsbProject from "@/assets/images/gsb-photo-project.png"
 import portfolio from "@/assets/images/portfolio.png"
 import langchain from "@/assets/images/Langchain.png"
-import flint from "@/assets/images/agile-method-concept-illustration_114360-9809.avif"
 import {useRouter} from "vue-router";
 import Buttons from "@/components/common/buttons.vue";
-import sonarQube from "@/assets/images/sonarqube.png"
 import sap from "@/assets/images/sap.png"
 import afip from "@/assets/images/AFIP.jpg"
-import gsbMobile from "@/assets/images/app_mobile.png"
-import metasploitable from "@/assets/images/metasploit.png"
-import gradio from "@/assets/images/gradio-min.png"
-import cvImage from "@/assets/images/cyril_cv.png";
+
 
 import boardSkills from "@/assets/Tableau-de-synthese-E4-BTS-SIO-2024-DUPONT-CYRIL.pdf"
 
@@ -30,7 +25,7 @@ const projects = [
     id: 1,
     title: 'Agentic IA',
     description: 'Implémentation de framework IA permettant de contraindre les LLM à répondre selon des structures de données définies   ',
-    tech: ['FastAPI', 'Gradio', 'Langchain', 'Langraph', 'Langfuse', 'Pydantic', 'Python'],
+    tech: ['FastAPI', 'Langchain', 'Langraph', 'Langfuse', 'Pydantic', 'Python'],
     image: langchain,
     seeMore: 'https://example-weather.com'
   },
@@ -51,47 +46,19 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Sap commerce Flint',
-    description: 'Implémentation de pipes de traduction',
-    tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
-    image: flint,
-  },
-  {
-    id: 5,
     title: 'Sap commerce ADVEO',
     description: 'Ajout de fonctionnalités en accord avec des spec techniques',
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
     image: sap,
   },
   {
-    id: 6,
-    title: 'Metasploitable',
-    description: "Introduction aux tests d'intrusion (pentesting) au travers d'un TP en utilisant une machine virtuelle laissée vulnérable délibéremment",
-    tech: ['Kali linux', 'NMAP', 'Brute Force', 'Protocoles', 'Identité Visuelle'],
-    image: metasploitable,
-  },
-  {
-    id: 7,
+    id: 5,
     title: 'Analyse SEO',
     description: 'Compréhension des enjeux du référencement en ligne pour améliorer la visibilité des organisations',
     tech: ['Wappalyzer', 'gtmetrix', 'SEO', 'SEA', 'SMO', 'Wireshark'],
     image: afip,
   },
-  {
-    id: 8,
-    title: 'Application GSB Mobile',
-    description: "Solution mobile réalisée dans le cadre du projet de fin d'étude permettant de laisser des avis sur les produits d'une entreprise fictive",
-    tech: ['Python', 'SqlAlchemy', 'MySQL', 'Android Studio', 'Retrofit'],
-    image: gsbMobile,
-  },
-  {
-    id: 9,
-    title: 'Automatisation des commandes',
-    description:'Participation à la création d\'un chatbot automatisant la prise de commandes' ,
-    tech: ['FastAPI', 'Gradio', 'Langchain', 'Python'],
-    image: langchain,
-    seeMore: 'https://example-weather.com'
-  },
+
 ]
 
 const router = useRouter();
