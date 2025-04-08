@@ -14,14 +14,12 @@
             ></div>
           </div>
 
-          <!-- Timeline items -->
           <div
               v-for="(section, index) in sections"
               :key="index"
               :class="index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'"
               class="relative flex items-center mb-12 sm:mb-16 sm:z-40"
           >
-            <!-- Content box -->
             <div class="relative bg-black border-b border-t border-l border-white glsm shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
               <h3 class="text-lg font-bold text-yellow-400 space-mono-regular">
                 {{ section.diploma }} {{ section.title }}

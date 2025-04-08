@@ -17,8 +17,7 @@ const pdfUrl = '/articles/react-angular-vue.pdf'; // Assure-toi que ton fichier 
       <div class="mt-6 p-6 rounded-lg shadow-lg text-white text-center">
         <h1 class="text-3xl font-bold mb-4 text-yellow-400">Comparatif : Vue.js, React, et Angular</h1>
         <p class="text-gray-300 mb-4 italic text-center">Quel framework frontend choisir en 2024 ?</p>
-
-        <!-- Affiche directement l'iframe -->
+        <p class="text-white px-2" >Cliquez sur le lien de l'url pour ouvrir </p>
         <iframe
             :src="pdfUrl"
             class="w-full h-[80vh] rounded-lg shadow-lg border-2 border-yellow-400 mt-4"

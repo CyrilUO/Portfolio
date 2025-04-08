@@ -36,7 +36,7 @@ watch(isMenuOpen, (newValue) => {
 </script>
 <template>
   <nav class="shadow-md fixed w-full bg-white top-0 z-50 transition-all py-2 duration-300">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="w-full px-4 sm:px-6 xl:px-8">
       <div class="flex h-16 justify-between items-center">
         <div class="flex-shrink-0">
           <img
@@ -46,8 +46,7 @@ watch(isMenuOpen, (newValue) => {
           />
         </div>
 
-        <div class="hidden lg:flex flex-grow justify-end space-x-6">
-          <!-- Utilisation de router-link avec hash pour scrolling interne -->
+        <div class="hidden xl:flex flex-grow justify-end space-x-6">
           <router-link
               v-for="item in navigation"
               :key="item.name"
@@ -59,7 +58,7 @@ watch(isMenuOpen, (newValue) => {
         </div>
 
         <!-- Mobile Hamburger Menu -->
-        <div class="lg:hidden">
+        <div class="xl:hidden">
           <button
               class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-yellow-100 transition-transform duration-300"
               @click="toggleMenu"
@@ -73,7 +72,7 @@ watch(isMenuOpen, (newValue) => {
     </div>
 
     <!-- Mobile Menu -->
-    <div v-show="isMenuOpen" class="lg:hidden bg-white shadow-md transition-all duration-300">
+    <div v-show="isMenuOpen" class="xl:hidden bg-white shadow-md transition-all duration-300">
       <div class="space-y-1 pb-3 pt-2">
         <router-link
             v-for="item in navigation"

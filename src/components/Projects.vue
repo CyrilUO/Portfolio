@@ -11,11 +11,24 @@ import sap from "@/assets/images/sap.png"
 import afip from "@/assets/images/AFIP.jpg"
 import gsbMobile from "@/assets/images/app_mobile.png"
 import metasploitable from "@/assets/images/metasploit.png"
+import gradio from "@/assets/images/gradio-min.png"
+import cvImage from "@/assets/images/cyril_cv.png";
+
+import boardSkills from "@/assets/Tableau-de-synthese-E4-BTS-SIO-2024-DUPONT-CYRIL.pdf"
+
+const downloadSkills = () => {
+  const link = document.createElement('a');
+  link.href = boardSkills;
+  link.download = 'Cyril_DUPONT_REFERENTIELS.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 const projects = [
   {
     id: 1,
-    title: 'LLM',
+    title: 'Agentic IA',
     description: 'Implémentation de framework IA permettant de contraindre les LLM à répondre selon des structures de données définies   ',
     tech: ['FastAPI', 'Gradio', 'Langchain', 'Langraph', 'Langfuse', 'Pydantic', 'Python'],
     image: langchain,
@@ -45,42 +58,44 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Utilisation de SonarCube',
-    description: 'Implémentation du plug-in SonarCube pour tester les vulénrabilités dans un projet entreprise',
-    tech: ['SonarCube'],
-    image: sonarQube,
-  },
-  {
-    id: 6,
     title: 'Sap commerce ADVEO',
     description: 'Ajout de fonctionnalités en accord avec des spec techniques',
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
     image: sap,
   },
   {
-    id: 7,
+    id: 6,
     title: 'Metasploitable',
     description: "Introduction aux tests d'intrusion (pentesting) au travers d'un TP en utilisant une machine virtuelle laissée vulnérable délibéremment",
-    tech: ['Kali linux', 'NMAP','Brute Force','Protocoles','Identité Visuelle'],
+    tech: ['Kali linux', 'NMAP', 'Brute Force', 'Protocoles', 'Identité Visuelle'],
     image: metasploitable,
   },
   {
-    id: 8,
+    id: 7,
     title: 'Analyse SEO',
     description: 'Compréhension des enjeux du référencement en ligne pour améliorer la visibilité des organisations',
-    tech: ['Wappalyzer', 'SEO','SEA','SMO','Identité Visuelle'],
+    tech: ['Wappalyzer', 'gtmetrix', 'SEO', 'SEA', 'SMO', 'Wireshark'],
     image: afip,
   },
   {
-    id: 9,
+    id: 8,
     title: 'Application GSB Mobile',
     description: "Solution mobile réalisée dans le cadre du projet de fin d'étude permettant de laisser des avis sur les produits d'une entreprise fictive",
-    tech: ['Python', 'SqlAlchemy','MySQL','Android Studio','Retrofit'],
+    tech: ['Python', 'SqlAlchemy', 'MySQL', 'Android Studio', 'Retrofit'],
     image: gsbMobile,
-  }
+  },
+  {
+    id: 9,
+    title: 'Automatisation des commandes',
+    description:'Participation à la création d\'un chatbot automatisant la prise de commandes' ,
+    tech: ['FastAPI', 'Gradio', 'Langchain', 'Python'],
+    image: langchain,
+    seeMore: 'https://example-weather.com'
+  },
 ]
 
 const router = useRouter();
+
 
 
 const goToProject = (id) => {
@@ -115,7 +130,7 @@ const goToProject = (id) => {
             <p class="text-white text-center flex-grow">
               {{ project.description }}
             </p>
-            <div class="flex flex-wrap justify-start justify-center gap-2 mt-3">
+            <div class="flex flex-wrap justify-center gap-2 mt-3">
               <span
                   v-for="tech in project.tech"
                   :key="tech"
@@ -131,7 +146,7 @@ const goToProject = (id) => {
         </div>
         <div>
           <div class="flex justify-center mt-5 pt-5">
-            <Buttons label="Télécharger le tableau de compétences" @click="goToProject(project.id)"></Buttons>
+            <Buttons label="Télécharger le référentiel" v-on:click="downloadSkills"></Buttons>
           </div>
         </div>
       </div>

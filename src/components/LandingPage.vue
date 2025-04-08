@@ -20,7 +20,7 @@ const contentArray = [
 const currentContent = ref(contentArray[0]);
 let contentIndex = 0;
 let typingTimeout;
-let resizeCanvas; // ✅ Declare resizeCanvas globally
+let resizeCanvas; //
 
 const cycleContent = () => {
   contentIndex = (contentIndex + 1) % contentArray.length;
@@ -150,14 +150,14 @@ onUnmounted(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: white; /* Fond blanc pour l'image */
-  padding: 4px; /* Espace autour de l'image */
-  border-radius: 4px; /* Arrondir légèrement */
+  background-color: white;
+  padding: 4px;
+  border-radius: 4px;
 }
 
 .logo {
-  height: max-content; /* Alignement avec la taille du texte */
-  width: 5rem; /* Conserve les proportions */
+  height: max-content;
+  width: 5rem;
 }
 
 /* Cursor blink effect */

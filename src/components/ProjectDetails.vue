@@ -5,20 +5,43 @@ import FadeIn from "./FadeIn.vue";
 import langchain from "@/assets/images/Langchain.png";
 import gsbProject from "@/assets/images/gsb-photo-project.png";
 import portfolio from "@/assets/images/portfolio.png";
-import del from "@/assets/images/delaware.jpg";
+import flint from "@/assets/images/agile-method-concept-illustration_114360-9809.avif";
+import sap from "@/assets/images/sap.png";
+import metasploitable from "@/assets/images/metasploit.png";
+import gradio from "@/assets/images/gradio-min.png";
+import afip from "@/assets/images/AFIP.jpg";
+import gsbMobile from "@/assets/images/app_mobile.png";
+import Buttons from "@/components/common/buttons.vue";
+import referentielPDF from "@/assets/images/cyril_cv.png";
+
+const downloadRef = () => {
+  const link = document.createElement('a');
+  link.href = referentielPDF;
+  link.download = 'Cyril_DUPONT_REFERENTIEL.png';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 
 const projects = [
   {
-    id:1,
-    title: 'MVP LLM',
+    id: 1,
+    title: 'LLM',
     description: 'Implémentation de framework IA permettant de contraindre les LLM à répondre selon des structures de données définies   ',
     tech: ['FastAPI', 'Gradio', 'Langchain', 'Langraph', 'Langfuse', 'Pydantic', 'Python'],
     image: langchain,
-    seeMore: 'https://example-weather.com'
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
   },
   {
-    id:2,
+    id: 2,
     title: 'GSB ecommerce',
     description: 'Réplicat d\'une solution ecommerce dans le cadre du projet de fin d\'étude répondant à un besoin d\'une entreprise fictive',
     tech: ['Vue.JS3', 'Spring JDBC-Security-Web', 'Java', 'Javascript', 'MySQL', 'Docker', 'Axios'],
@@ -26,36 +49,101 @@ const projects = [
     seeMore: {githubFront: 'https://github', githubBack: 'https://github'},
   },
   {
-    id:3,
+    id: 3,
     title: 'Portfolio Website',
     description: 'Portfolio réalisé en cours de deuxième année de formation.',
     tech: ['Vue', 'Tailwind CSS'],
     image: portfolio,
-    seeMore: ''
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
   },
   {
-    id:4,
-    title: 'SAP commerce Flint',
-    description: 'Participation ',
-    tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java', 'Spartacus'],
-    image: del,
-    seeMore: 'https:'
+    id: 4,
+    title: 'Sap commerce Flint',
+    description: 'Implémentation de pipes de traduction',
+    tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
+    image: flint,
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
   },
   {
-    id:5,
-    title: 'Utilisation de SonarCube',
-    description: "Implémentation du plug-in SonarQube pour l'analyse de la sécurité et la détection des vulnérabilités dans une application d'entreprise. Processus complet incluant la revue de l'application, des entretiens avec les parties prenantes concernées pour comprendre les exigences de sécurité, ainsi qu'une analyse approfondie des résultats pour identifier les axes d'amélioration et garantir la conformité aux normes de qualité et de sécurité.",
-    tech: ['SonarCube'],
-    image: del,
-    seeMore: 'https'
+    id: 5,
+    title: 'POC client Advini',
+    description: 'Utilisation d\'un framework pour créer des chatbots',
+    tech: ['Gradio', 'Langchain'],
+    image: gradio,
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
   },
   {
     id: 6,
-    title: 'Sap commerce ADVEO ',
-    description: "Développement de nouvelles fonctionnalités pour le client ADVEO en suivant des spécifications techniques précises, tout en respectant les besoins clients identifiés lors de phases d'analyse approfondie. Travail réalisé selon une méthodologie Agile avec une organisation en sprints itératifs, incluant des réunions régulières de suivi (Daily Stand-Up, Sprint Review, Sprint Planning) pour assurer une progression cohérente, une amélioration continue et une adéquation avec les attentes du client.",
+    title: 'Sap commerce ADVEO',
+    description: 'Ajout de fonctionnalités en accord avec des spec techniques',
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
-    image: del,
-    seeMore: 'https'
+    image: sap,
+  },
+  {
+    id: 7,
+    title: 'Metasploitable',
+    description: "Introduction aux tests d'intrusion (pentesting) au travers d'un TP en utilisant une machine virtuelle laissée vulnérable délibéremment",
+    tech: ['Kali linux', 'NMAP','Brute Force','Protocoles','Identité Visuelle'],
+    image: metasploitable,
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
+  },
+  {
+    id: 8,
+    title: 'Analyse SEO',
+    description: 'Compréhension des enjeux du référencement en ligne pour améliorer la visibilité des organisations',
+    tech: ['Wappalyzer', 'gtmetrix', 'SEO','SEA','SMO','Wireshark'],
+    image: afip,
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
+  },
+  {
+    id: 9,
+    title: 'Application GSB Mobile',
+    description: "Solution mobile réalisée dans le cadre du projet de fin d'étude permettant de laisser des avis sur les produits d'une entreprise fictive",
+    tech: ['Python', 'SqlAlchemy','MySQL','Android Studio','Retrofit'],
+    image: gsbMobile,
+    competence: {
+      first:[],
+      second:[],
+      third:[],
+      fourth:[],
+      fifth:[],
+      sixth:[]
+    }
   }
 ]
 
@@ -76,15 +164,20 @@ const project = computed(() => projects.find((p) => p.id === projectId.value));
         <h1 class="text-3xl text-white text-center mb-6 font-bold">{{ project.title }}</h1>
         <img :src="project.image" class="w-fit mx-auto h-64 object-fit my-4 rounded" />
         <p class="text-gray-300">{{ project.description }}</p>
+        <div>
+          <span>Compétences mises en oeuvres</span>
+        </div>
+
+        <div class="flex flex-col" v-if="project.seeMore">
+          <a :href="project.seeMore.githubFront">{{project.seeMore.githubFront}}</a>
+          <a :href="project.seeMore.githubFront">{{project.seeMore.githubBack}}</a>
+        </div>
       </div>
-      <div v-if="project.seeMore">
-        <a :href="project.seeMore.githubFront">{{project.seeMore.githubFront}}</a>
-        <a :href="project.seeMore.githubFront">{{project.seeMore.githubBack}}</a>
-      </div>
+
       <div v-else class="text-center text-red-500">Projet introuvable 😢</div>
     </div>
     <div>
-      <a href="#" download="">Voir le férentiel de compétences</a>
+      <Buttons label="Télécharger le référentiel" v-on:click="downloadRef"></Buttons>
     </div>
     <router-link to="/" class="text-yellow-500 hover:underline">⬅ Retour aux projets</router-link>
   </FadeIn>
