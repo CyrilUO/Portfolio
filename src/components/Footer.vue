@@ -1,15 +1,14 @@
 <script setup>
 const currentYear = new Date().getFullYear();
-const githubUrl = "https://github.com/CyrilUO"; // Stocké ici pour éviter d'être visible dans le HTML
-const linkedinUrl = "https://github.com/CyrilUO";
+const githubUrl = "https://github.com/CyrilUO";
+const linkedinUrl = "https://fr.linkedin.com/in/cyril-dupont-835155227?trk=public_post_feed-actor-name";
 </script>
 
 <template>
+  <div class="py-1 bg-white"></div>
   <footer class="bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-      <!-- Liens vers les réseaux sociaux -->
       <div class="flex justify-center gap-4">
-        <!-- GitHub -->
         <a
             :href="githubUrl"
             target="_blank"
@@ -29,7 +28,6 @@ const linkedinUrl = "https://github.com/CyrilUO";
           GitHub
         </a>
 
-        <!-- LinkedIn -->
         <a
             :href="linkedinUrl"
             target="_blank"
@@ -50,7 +48,6 @@ const linkedinUrl = "https://github.com/CyrilUO";
         </a>
       </div>
 
-      <!-- Bas de page -->
       <div class="mt-8 pt-4 flex flex-wrap justify-center border-gray-800 text-center text-gray-400">
         <div class="mr-6">
           <p>&copy; {{ currentYear }} CyrilUO </p>

@@ -11,7 +11,7 @@ const setupObserver = () => {
       ([{ isIntersecting }]) => {
         if (isIntersecting) {
           isVisible.value = true
-          stop() // Arrête l'observateur une fois visible
+          stop()
         }
       },
       { threshold: 0.2 }
@@ -21,7 +21,6 @@ const setupObserver = () => {
 onMounted(() => {
   setupObserver()
 
-  // Ajoutez un écouteur pour détecter les redimensionnements
   const onResize = () => {
     if (!isVisible.value) {
       setupObserver() // Relance l'observateur si le contenu est invisible

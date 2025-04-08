@@ -2,42 +2,47 @@
 import FadeIn from './FadeIn.vue'
 import Buttons from "@/components/common/buttons.vue";
 
-const downloadCV = () => {
+import cvImage from "@/assets/images/cyril_cv.png"
 
+const downloadCV = () => {
+  const link = document.createElement('a');
+  link.href = cvImage;
+  link.download = 'Cyril_DUPONT_CV.png';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
+
 </script>
 
 <template>
-  <section id="about" class="w-full flex items-center justify-center">
+  <div class="py-1 bg-white"></div>
+  <section id="about" class="w-full flex items-center justify-center bg-black py-20 px-6 mx-auto  md:px-10">
     <FadeIn>
-      <div class="max-w-7xl w-5/6 py-10 px-10 m-auto">
-        <!-- Titre et sous-titre -->
-        <h2 class="section-title text-center text-4xl font-bold text-white mb-6">Qui suis-je ?</h2>
+      <div class="max-w-7xl w-full flex flex-col items-center space-y-12">
+        <h2 class="section-title text-center text-4xl font-bold text-yellow-400 mb-6">Qui suis-je ?</h2>
 
-        <!-- Contenu principal -->
-        <div class="flex flex-col md:flex-row items-center gap-14">
-          <!-- Image à gauche -->
-          <div class="w-full md:w-1/2 flex justify-center overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 w-full">
+          <div class="w-full md:w-1/2 flex justify-center">
             <img
                 src="../assets/images/me.jpg"
                 alt="Votre photo"
-                class="rounded-ee-xl shadow-lg object-cover w-full h-auto max-w-xs md:max-w-md"
+                class="rounded-xl shadow-lg object-cover w-full h-auto max-w-sm md:max-w-md transition-transform duration-300 hover:scale-105"
             />
           </div>
 
-          <!-- Description à droite -->
-          <div class="w-full md:w-1/2 text-gray-700">
-            <p class="text-lg leading-relaxed">
-              Passionné par le développement web, j'apprends différents technologies pour appréhender le développement front et back end
+          <div class="w-full text-yellow-400 md:w-1/2 space-y-6">
+            <p class="text-lg md:text-xl leading-relaxed">
+              Passionné par le développement informatique, j'apprends différentes technos pour obtenir un bagage de développeur fullstack.
+              <br><br>Avec l'apprentissage permanent comme credo, j'aime mettre à dispositions mes compétences dans le cadre de projets personnels ou professionnels
             </p>
-            <p class="text-lg leading-relaxed mt-4">
-              Je m'intéresse aussi aux différents framework IA et tout ce qui est relatif à ce domaine.
+            <p class="text-lg text-yellow-400 md:text-xl leading-relaxed">
+              Je m'intéresse également aux frameworks agentic permettant l'automatisation des tâches au sein des entreprises.
             </p>
           </div>
         </div>
 
-        <!-- Bouton Télécharger CV -->
-        <div class="flex justify-center mt-8 align-middle">
+        <div class="flex justify-center mt-8">
           <Buttons label="Télécharger mon CV" v-on:click="downloadCV"></Buttons>
         </div>
       </div>
@@ -45,41 +50,27 @@ const downloadCV = () => {
   </section>
 </template>
 
-
 <style scoped>
-/* Background for the section */
-section {
-  padding: 2rem 1rem; /* Ajoute des espaces internes */
-  background-color: #ffffff;
-  margin-top: 5rem; /* Réduit l'espace supérieur */
-}
-
-
-/* Title styles */
 .section-title {
-  color: #ffffff; /* White */
   font-family: "Signika Negative", sans-serif;
 }
 
-h3 {
-  font-family: "Signika Negative", sans-serif
+.text-custo {
+  color:#b29627
 }
-
-/* Description text */
 p {
-  padding-block:1rem;
-  text-align: start;
   color: #b29627;
-  line-height: 1.5;
+  line-height: 1.75;
   font-family: "Signika Negative", sans-serif;
-  font-size: 1rem;
-  font-style: normal;
 }
 
 img {
-  margin: 0 auto; /* Centre l'image horizontalement */
-  padding: 0.5rem; /* Espace autour de l'image */
+  border: 4px solid #b29627;
+  border-radius: 12px;
+  transition: transform 0.3s;
 }
 
-
+img:hover {
+  transform: scale(1.05);
+}
 </style>

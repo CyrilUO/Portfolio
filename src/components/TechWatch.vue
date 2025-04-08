@@ -7,24 +7,24 @@ const articles = [
   {
     id: 1,
     title: "Comparatif : Vue.js, React, et Angular",
-    description: "Quel framework frontend choisir en 2024 ?",
+    description: "Quel framework frontend choisir en 2024-2025 ?",
     date: "1 Décembre 2024",
     image: articleImage,
     filename : "react-angular-vue.pdf",
-
   },
 ];
-
 </script>
 
 <template>
-  <section id="tech-watch" class="bg-white">
+  <div class="bg-white py-1"></div>
+
+  <section id="tech-watch" class="bg-black min-h-screen mx-4">
     <FadeIn>
       <div class="max-w-7xl mx-auto py-8">
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-2">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-2">
           Tech Watch
         </h2>
-        <p class="text-lg text-center text-gray-600 mb-8">
+        <p class="text-lg text-center text-white space-mono-regular-italic mb-8">
           Articles sur les tendances tech de 2024 - 2025
         </p>
         <div
@@ -40,7 +40,7 @@ const articles = [
           <div
               v-for="article in articles"
               :key="article.id"
-              class="bg-white border-t border-l rounded-lg overflow-hidden flex flex-col shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]"
+              class="bg-black border-white border rounded-lg overflow-hidden flex flex-col items-center text-center"
           >
             <img
                 :src="article.image"
@@ -48,15 +48,23 @@ const articles = [
                 class="h-40 object-contain"
             />
             <div class="p-4 flex flex-col flex-grow">
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <h3 class="text-xl font-semibold text-white mb-2">
                 {{ article.title }}
               </h3>
-              <p class="text-gray-600 mb-4 flex-grow">
+              <p class="text-white mb-4 flex-grow">
                 {{ article.description }}
               </p>
-              <div class="text-sm text-gray-500 mb-4">{{ article.date }}</div>
-              <div class="flex justify-center">
-                <Buttons label="Télécharger l'article" :download="`${article.filename}`" :href="`/articles/${article.filename}`" v-on:click=""></Buttons>
+              <div class="text-sm text-gray-50 mb-4">{{ article.date }}</div>
+              <div class="flex justify-center mt-10">
+                <router-link
+                    :to="{ name: 'TechWatchDetails', params: { id: article.id } }"
+                    class="text-xs sm:text-sm px-3 sm:px-6 py-1 sm:py-1.5 bg-gray-900 text-yellow-400 font-mono font-bold
+                    rounded-sm border-2 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900
+                    transition duration-300 shadow-[4px_4px_0_theme(colors.yellow.400)]
+                    hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+                >
+                  Voir l'article
+                </router-link>
               </div>
             </div>
           </div>

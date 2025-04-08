@@ -3,9 +3,14 @@ import FadeIn from './FadeIn.vue'
 import gsbProject from "@/assets/images/gsb-photo-project.png"
 import portfolio from "@/assets/images/portfolio.png"
 import langchain from "@/assets/images/Langchain.png"
-import del from "@/assets/images/delaware.jpg"
+import flint from "@/assets/images/agile-method-concept-illustration_114360-9809.avif"
 import {useRouter} from "vue-router";
 import Buttons from "@/components/common/buttons.vue";
+import sonarQube from "@/assets/images/sonarqube.png"
+import sap from "@/assets/images/sap.png"
+import afip from "@/assets/images/AFIP.jpg"
+import gsbMobile from "@/assets/images/app_mobile.png"
+import metasploitable from "@/assets/images/metasploit.png"
 
 const projects = [
   {
@@ -30,31 +35,48 @@ const projects = [
     description: 'Portfolio réalisé en cours de deuxième année de formation.',
     tech: ['Vue', 'Tailwind CSS'],
     image: portfolio,
-    seeMore: ''
   },
   {
     id: 4,
-    title: 'Participation projet client ecommerce',
-    description: 'Ajout de fonctionnalités en accord avec des spec techniques',
+    title: 'Sap commerce Flint',
+    description: 'Implémentation de pipes de traduction',
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
-    image: del,
-    seeMore: 'https:'
+    image: flint,
   },
   {
     id: 5,
     title: 'Utilisation de SonarCube',
     description: 'Implémentation du plug-in SonarCube pour tester les vulénrabilités dans un projet entreprise',
     tech: ['SonarCube'],
-    image: del,
-    seeMore: 'https'
+    image: sonarQube,
   },
   {
     id: 6,
-    title: 'Visualisation ',
+    title: 'Sap commerce ADVEO',
     description: 'Ajout de fonctionnalités en accord avec des spec techniques',
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
-    image: del,
-    seeMore: 'https'
+    image: sap,
+  },
+  {
+    id: 7,
+    title: 'Metasploitable',
+    description: "Introduction aux tests d'intrusion (pentesting) au travers d'un TP en utilisant une machine virtuelle laissée vulnérable délibéremment",
+    tech: ['Kali linux', 'NMAP','Brute Force','Protocoles','Identité Visuelle'],
+    image: metasploitable,
+  },
+  {
+    id: 8,
+    title: 'Analyse SEO',
+    description: 'Compréhension des enjeux du référencement en ligne pour améliorer la visibilité des organisations',
+    tech: ['Wappalyzer', 'SEO','SEA','SMO','Identité Visuelle'],
+    image: afip,
+  },
+  {
+    id: 9,
+    title: 'Application GSB Mobile',
+    description: "Solution mobile réalisée dans le cadre du projet de fin d'étude permettant de laisser des avis sur les produits d'une entreprise fictive",
+    tech: ['Python', 'SqlAlchemy','MySQL','Android Studio','Retrofit'],
+    image: gsbMobile,
   }
 ]
 
@@ -68,7 +90,9 @@ const goToProject = (id) => {
 
 
 <template>
-  <section id="projects" class="bg-gray-600 py-24">
+  <div class="bg-white py-1"></div>
+
+  <section id="projects" class="bg-black pt-24 pb-12 mx-4">
     <FadeIn>
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-4xl font-bold text-center text-yellow-400 mb-5">Réalisations</h2>
@@ -79,8 +103,8 @@ const goToProject = (id) => {
           <div
               v-for="project in projects"
               :key="project.id"
-              class="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center min-h-[450px]">
-            <h3 class="text-xl font-semibold text-white space-mono-bold mb-2">
+              class="bg-black p-6 rounded-xl shadow-lg flex flex-col items-center min-h-[450px] border border-white">
+            <h3 class="text-xl font-semibold text-white mb-2">
               {{ project.title }}
             </h3>
             <img
@@ -88,10 +112,10 @@ const goToProject = (id) => {
                 :alt="project.title"
                 class="h-40 w-fit object-contain rounded-md mb-4 shadow-xl"
             />
-            <p class="text-white space-mono-regular flex-grow">
+            <p class="text-white text-center flex-grow">
               {{ project.description }}
             </p>
-            <div class="flex flex-wrap justify-start gap-2 mt-3">
+            <div class="flex flex-wrap justify-start justify-center gap-2 mt-3">
               <span
                   v-for="tech in project.tech"
                   :key="tech"
@@ -103,6 +127,11 @@ const goToProject = (id) => {
             <div class="mt-4 flex justify-center py-2">
               <Buttons label="Voir le projet" @click="goToProject(project.id)"></Buttons>
             </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-center mt-5 pt-5">
+            <Buttons label="Télécharger le tableau de compétences" @click="goToProject(project.id)"></Buttons>
           </div>
         </div>
       </div>

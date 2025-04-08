@@ -40,7 +40,7 @@ watch(isMenuOpen, (newValue) => {
       <div class="flex h-16 justify-between items-center">
         <div class="flex-shrink-0">
           <img
-              src="../assets/images/logo-2.png"
+              src="../assets/images/Logo-removebg-preview.png"
               alt="UO-LOGO"
               class="object-fit"
           />
@@ -52,7 +52,7 @@ watch(isMenuOpen, (newValue) => {
               v-for="item in navigation"
               :key="item.name"
               :to="item.href"
-              class="font-mono hover:text-yellow-400 transition-colors duration-200"
+              class="font-custo hover:text-yellow-400 transition-colors duration-200"
           >
             {{ item.name }}
           </router-link>
@@ -79,7 +79,7 @@ watch(isMenuOpen, (newValue) => {
             v-for="item in navigation"
             :key="item.name"
             :to="item.href"
-            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-primary-700 transition-all duration-300"
+            class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-custo text-gray-500 hover:bg-gray-50 hover:text-primary-700 transition-all duration-300"
             @click="closeMenu"
         >
           {{ item.name }}
@@ -113,6 +113,10 @@ button {
 
 button:hover {
   transform: scale(1.1);
+}
+
+.font-custo{
+  font-family: "Space Mono", serif;
 }
 
 

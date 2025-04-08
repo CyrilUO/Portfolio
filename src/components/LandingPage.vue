@@ -104,7 +104,6 @@ onUnmounted(() => {
 
     <canvas id="hero-bg" class="absolute inset-0 pointer-events-none z-0"></canvas>
 
-    <!-- Content -->
     <FadeIn>
       <div class="relative z-10 text-center px-4">
         <h1 class="text-title font-display font-bold text-white mb-4">
@@ -128,9 +127,6 @@ onUnmounted(() => {
             </span>
           </template>
         </h1>
-        <p class="text-body space-mono-bold text-gray-200 max-w-xl mx-auto mb-8 mt-5">
-          Créons ensemble des expériences web modernes et performantes.
-        </p>
         <Buttons title="Entrez en contact" label="Entrons en contact" v-on:click="goToContact" ></Buttons>
       </div>
     </FadeIn>

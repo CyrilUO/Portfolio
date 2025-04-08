@@ -1,9 +1,12 @@
 import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import ProjectDetail from "@/components/ProjectDetails.vue";
+import TechWatchDetail from "@/components/TechWatchDetails.vue"
 
 const routes = [
     { path: "/", component: () => import("@/components/Main.vue") },
     { path: "/projects/:id", name: "ProjectDetail", component: ProjectDetail, props: true },
+
+    { path: "/tech-watch/:id", name: "TechWatchDetails", component: TechWatchDetail, props: true },
 ];
 
 const router = createRouter({

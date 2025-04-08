@@ -35,24 +35,24 @@ const projects = [
   },
   {
     id:4,
-    title: 'Projet SAP e-commerce',
-    description: 'Ajout de fonctionnalités dans un tunnel de commande en accord avec des spec techniques',
-    tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
+    title: 'SAP commerce Flint',
+    description: 'Participation ',
+    tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java', 'Spartacus'],
     image: del,
     seeMore: 'https:'
   },
   {
     id:5,
     title: 'Utilisation de SonarCube',
-    description: 'Implémentation du plug-in SonarCube pour tester les vulénrabilités dans un projet entreprise',
+    description: "Implémentation du plug-in SonarQube pour l'analyse de la sécurité et la détection des vulnérabilités dans une application d'entreprise. Processus complet incluant la revue de l'application, des entretiens avec les parties prenantes concernées pour comprendre les exigences de sécurité, ainsi qu'une analyse approfondie des résultats pour identifier les axes d'amélioration et garantir la conformité aux normes de qualité et de sécurité.",
     tech: ['SonarCube'],
     image: del,
     seeMore: 'https'
   },
   {
     id: 6,
-    title: 'Visualisation ',
-    description: 'Ajout de fonctionnalités en accord avec des spec techniques',
+    title: 'Sap commerce ADVEO ',
+    description: "Développement de nouvelles fonctionnalités pour le client ADVEO en suivant des spécifications techniques précises, tout en respectant les besoins clients identifiés lors de phases d'analyse approfondie. Travail réalisé selon une méthodologie Agile avec une organisation en sprints itératifs, incluant des réunions régulières de suivi (Daily Stand-Up, Sprint Review, Sprint Planning) pour assurer une progression cohérente, une amélioration continue et une adéquation avec les attentes du client.",
     tech: ['Sap Commerce', 'Flexible Search', 'Javascript', 'Java'],
     image: del,
     seeMore: 'https'
@@ -71,14 +71,21 @@ const project = computed(() => projects.find((p) => p.id === projectId.value));
 
 <template>
   <FadeIn>
-    <div class="max-w-4xl mx-auto p-8 bg-white text-black min-h-screen mt-20">
-      <router-link to="/" class="text-yellow-500 hover:underline">⬅ Retour aux projets</router-link>
+    <div class="max-w-5xl mx-auto p-8 bg-white text-black min-h-screen mt-20">
       <div v-if="project" class="mt-6 bg-black p-6 rounded-lg shadow-lg text-white">
-        <h1 class="text-3xl font-bold">{{ project.title }}</h1>
-        <img :src="project.image" class="w-full h-64 object-cover my-4 rounded" />
+        <h1 class="text-3xl text-white text-center mb-6 font-bold">{{ project.title }}</h1>
+        <img :src="project.image" class="w-fit mx-auto h-64 object-fit my-4 rounded" />
         <p class="text-gray-300">{{ project.description }}</p>
+      </div>
+      <div v-if="project.seeMore">
+        <a :href="project.seeMore.githubFront">{{project.seeMore.githubFront}}</a>
+        <a :href="project.seeMore.githubFront">{{project.seeMore.githubBack}}</a>
       </div>
       <div v-else class="text-center text-red-500">Projet introuvable 😢</div>
     </div>
+    <div>
+      <a href="#" download="">Voir le férentiel de compétences</a>
+    </div>
+    <router-link to="/" class="text-yellow-500 hover:underline">⬅ Retour aux projets</router-link>
   </FadeIn>
 </template>

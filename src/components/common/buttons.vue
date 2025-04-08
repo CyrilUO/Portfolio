@@ -14,19 +14,28 @@
 </template>
 
 <script setup>
-import {defineProps, defineEmits} from "vue";
-
 const props = defineProps({
-  label: String,    // Texte du bouton
+  label: String,
   href: String,
-  onClick: Function,// Fonction à exécuter au clic
+  onClick: Function,
   download: String,
   class: String
 });
 
 const emit = defineEmits(["click"]);
 
-const handleClick = () => {
+const handleClick = (event) => {
+  if (props.href && props.download) {
+    event.preventDefault();
+
+    const link = document.createElement('a');
+    link.href = props.href;
+    link.setAttribute('download', props.download);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   if (props.onClick) {
     props.onClick();
   }

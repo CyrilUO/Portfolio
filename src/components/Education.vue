@@ -1,14 +1,13 @@
 <template>
-  <section id="education" class="relative bg-gray-500">
+  <div class="bg-white py-1"></div>
+  <section id="education" class="relative bg-black pt-24 pb-12 mx-4">
     <FadeIn>
-      <div class="mx-auto bg-gray-500 pb-10 pt-5 space-mono-regular py-10 rounded-3xl sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-8 space-mono-regular-italic">
+      <div class="mx-auto bg-black pb-10 pt-5 space-mono-regular py-10 rounded-3xl sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-yellow-400 mb-8">
           Mon Parcours Éducatif
         </h2>
-        <div class="relative">
-          <!-- Timeline central line -->
+        <div class="relative border-t border-white">
           <div class="absolute inset-0 left-1/2 w-1 transform -translate-x-1/2 z-10">
-            <!-- Barre dorée dynamique -->
             <div
                 ref="goldBar"
                 class="w-full goldBar rounded-full bg-yellow-500 transition-all duration-300 opacity-0"
@@ -23,7 +22,7 @@
               class="relative flex items-center mb-12 sm:mb-16 sm:z-40"
           >
             <!-- Content box -->
-            <div class="relative bg-black border-b border-white glsm shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
+            <div class="relative bg-black border-b border-t border-l border-white glsm shadow-lg rounded-lg p-6 w-full sm:w-1/2 z-20">
               <h3 class="text-lg font-bold text-yellow-400 space-mono-regular">
                 {{ section.diploma }} {{ section.title }}
               </h3>
@@ -46,7 +45,6 @@
 import {ref, onMounted, onUnmounted} from "vue";
 import FadeIn from "@/components/FadeIn.vue";
 
-// Data for the timeline
 const sections = ref([
   {
     diploma: "Baccalauréat",
