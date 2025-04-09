@@ -20,7 +20,7 @@ const contentArray = [
 const currentContent = ref(contentArray[0]);
 let contentIndex = 0;
 let typingTimeout;
-let resizeCanvas; //
+let resizeCanvas;
 
 const cycleContent = () => {
   contentIndex = (contentIndex + 1) % contentArray.length;

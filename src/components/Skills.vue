@@ -44,7 +44,7 @@ const techSkills = {
     { name: "FastAPI", description: "Utilisation en entreprise et pour la création de l'application GSB mobile", image: FastAPI},
   ],
   "Outils & Environnements": [
-    { name: "Intellij", description: "En entreprise dans le cadre de la méthode Agile ainsi que lors de la réalisation du projet de fin de BTS", image: intellijLogo},
+    { name: "Intellij", description: "IDE sur lequel je trouve depuis maintenant 2 ans", image: intellijLogo},
     { name: "Git", description: "Utilisé dans le cadre de la méthode Agile ainsi que lors de la réalisation du projet de fin de BTS", image: Git},
     { name: "Docker", description: "Quelques cas d'utilisation, encore beaucoup à apprendre sur cet outils!", image: dockerLogo},
     { name: "Swagger", description: "Utilisation pour du test en local ainsi qu'au cours de plusieurs TP en étude", image: swagger },
@@ -99,7 +99,7 @@ const techSkills = {
 .skill-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(25deg,#facc15 5%, #000000 40%, #facc15 80%, #000000 100%);
+  background: linear-gradient(25deg, #8a7d52 5%, #594d3e 20%, #e7bb5b 90%, #f6f681 100%);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }

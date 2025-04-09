@@ -29,7 +29,6 @@ onMounted(() => {
 
   window.addEventListener('resize', onResize)
 
-  // Nettoyer l'écouteur au démontage
   onUnmounted(() => {
     window.removeEventListener('resize', onResize)
   })

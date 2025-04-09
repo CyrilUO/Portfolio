@@ -2,7 +2,7 @@
 import {computed} from "vue";
 import {useRoute} from "vue-router";
 import FadeIn from "./FadeIn.vue";
-import langchain from "@/assets/images/Langchain.png";
+import langchain from "@/assets/images/langchain-g.webp";
 import gsbProject from "@/assets/images/gsb-photo-project.png";
 import portfolio from "@/assets/images/portfolio.png";
 import sap from "@/assets/images/sap.png";
@@ -49,61 +49,53 @@ const projects = [
     <ul class="list-disc pl-6 text-white">
       <li><strong>Gérer le patrimoine informatique :</strong>
         <ul class="list-disc pl-6 text-white">
-          <li>Identification des ressources numériques (modèles de langage, API, outils de monitoring).</li>
-          <li>Implémentation d’un système de sécurité basé sur des contextes de sécurité et JWT pour protéger les endpoints de l’API.</li>
-          <li>Gestion des sauvegardes des logs et des modèles utilisés (Langfuse) permettant de tracker les errors lors du processus de raisonnement du LLM.</li>
-          <li>Respect des standards de sécurité imposés par l’environnement SAP.</li>
+          <li><span class="underline">Recenser et identifier les ressources numériques</span> : Identification des ressources numériques (modèles de langage, API, outils de monitoring).</li>
+          <li><span class="underline">Mettre en place et vérifier les niveaux d'habilitation associés à un service</span> :  Implémentation d’un système de sécurité basé sur des contextes de sécurité et JWT pour protéger les endpoints de l’API.</li>
+          <li><span class="underline">Vérifier les conditions de la continuité d'un service informatique</span> : Gestion des sauvegardes des logs et des modèles utilisés (Langfuse) permettant de tracker les errors lors du processus de raisonnement du LLM.</li>
+          <li><span class="underline">Gérer les sauvegardes</span> : Les sauvegardes faites ont concernés le versioning des différentes stage de l'application</li>
+          <li><span class="underline">Vérifier le respect des règles d'utilisations des ressources numériques </span> : Respect des standards de sécurité imposés par l’environnement SAP et les normes ISO.</li>
         </ul>
       </li>
 
       <li><strong>Répondre aux incidents et aux demandes d’assistance et d’évolution :</strong>
         <ul class="list-disc pl-6 text-white">
-          <li>Implémentation de la demande d’évolution du client pour améliorer le controle de leur widget data</li>
-          <li>Suivi des incidents techniques liés à l’intégration des différents composants (Langchain, Langfuse, Langraph).</li>
-          <li>Analyse des erreurs par l’exploitation des logs générés par Langfuse.</li>
-          <li>Mise en place d’un système de monitoring permettant une réponse rapide aux incidents.</li>
+          <li><span class="underline">Collecter, suivre et orienter des demandes</span> : Implémentation de la demande d’évolution du client pour améliorer le controle de leur widget data</li>
+          <li><span class="underline">Traiter des demandes concernant les services réseau et système applicatifs</span> : Suivi des incidents techniques liés à l’intégration des différents composants (Langchain, Langfuse, Langraph). Concerne plus l'entiereté du workflow qu'un composant de l'application lui même !</li>
+          <li><span class="underline">Traiter des demandes concernant les applications</span> : Analyse des erreurs par l’exploitation des logs générés par Langfuse.</li>
         </ul>
       </li>
 
       <li><strong>Travailler en mode projet :</strong>
         <ul class="list-disc pl-6 text-white">
-          <li>Définition des objectifs du projet en collaboration avec l’équipe via Microsoft Loop.</li>
-          <li>Utilisation d’outils de gestion de projet (GitHub) pour planifier les tâches et suivre les progrès.</li>
-          <li>Réalisation de rapports réguliers sur l’avancement du projet.</li>
+          <li><span class="underline">Analyser les objectifs et les modalités d'organisation d'un projet</span> : Définition des objectifs du projet en collaboration avec l’équipe via Microsoft Loop.</li>
+          <li><span class="underline">Plannifier les activités</span> : Utilisation d’outils de gestion de projet (GitHub) pour planifier les tâches et suivre les progrès.</li>
+          <li><span class="underline">Evaluer les indicateurs de suivi d'un projet et analyser les écarts</span> : Réalisation de rapports réguliers sur l’avancement du projet et les tâches étaient assignés à des dates spécifiques suite au chiffrage des jours passés à travailler sur certaines fonctionnalités</li>
         </ul>
       </li>
 
       <li><strong>Mettre à disposition des utilisateurs un service informatique :</strong>
         <ul class="list-disc pl-6 text-white">
-          <li>Déploiement de l’application dans un environnement sécurisé SAP.</li>
-          <li>Accompagnement des utilisateurs dans l’utilisation de l’outil, notamment par la documentation et la formation.</li>
-          <li>Réalisation de tests d’intégration et d’acceptation pour valider les fonctionnalités déployées.</li>
+          <li><span class="underline">Réaliser les test d'intégration et d'acceptation d'un service</span> : Tests non réalisés par les personnes de notre équipe </li>
+          <li><span class="underline">Déployer un service</span> : Déploiement de l’application dans un environnement sécurisé SAP nommé SAC (sandbox).</li>
+          <li><span class="underline">Accompagner les utilisateurs dans la mise en place d'un service</span> : Accompagnement des utilisateurs dans l’utilisation de l’outil, notamment par la rédaction d'une documentation technique et utilisateur.</li>
         </ul>
       </li>
 
       <li><strong>Organiser son développement professionnel :</strong>
         <ul class="list-disc pl-6 text-white">
-          <li>Veille technologique continue sur les nouvelles versions notamment de Langchain sur leur plateforme Youtube, recensant de nouvelles manière d'implémenter leur solution chaque jour!</li>
-          <li>Mise en place d’un environnement d’apprentissage personnel pour tester les nouvelles fonctionnalités des LLM depuis des projets de test locaux</li>
-            <li>Echange avec des développeurs ayant travaillé sur des projets Langchain complexes.</li>
+          <li><span class="underline">Mettre en place son environnement d'apprentissage personnel</span> : Veille technologique continue sur les nouvelles technologiques versions notamment de Langchain sur leur plateforme Youtube, via Linkedin avec des abonnements à des comptes dédiés afin de recenser et de parler aux collègues des nouvelles technologies du moment !</li>
+          <li><span class="underline">Mettre en oeuvre des outils et stratégies de veille informationnelle </span> : Subscription à plusieurs apps d'actu "MIT NEWS" / "TechPort" et newsletter "TLDR"</li>
+          <li><span class="underline">Gérer son identitié profesionnelle</span> : On m'a demandé d'ajouter à mon CV d'entreprise une compétence portant autour du développement LLM portant sur des cas d'usage précis</li>
+          <li><span class="underline">Développer son projet profesionnelle</span> : Cette expérience de développement LLM a clairement conditionné la suite des projets sur lesquels je souhaite participer et où seront consacrés mes efforts. Je souhaite devenir une figure référente dans le domaine agentic / IA d'ici à 2 ans</li>
         </ul>
       </li>
     </ul>
-
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Technologies utilisées :</h3>
-    <ul class="list-disc pl-6 text-white">
-      <li><strong>Backend :</strong> FastAPI, Pydantic, Langchain, Langfuse, Langraph</li>
-      <li><strong>Environnement :</strong> SAP sécurisé</li>
-      <li><strong>Outils de monitoring :</strong> Langfuse</li>
-      <li><strong>Outils de visualisation :</strong> Langraph / Mermaid</li>
-    </ul>
-
-    <p class=" text-white">
+    <p class="text-white">
       Ce projet a une fois encore permis de mettre en oeuvre un ensemble de compétences listées dans le référentiel tout en intégrant des pratiques modernes de développement au sein d'un environnement sécurisé.
       L’utilisation de technologies avancées comme Langchain et FastAPI a permis de structurer efficacement les sorties des LLM pour un usage dans le domaine de la data. Il est surement le projet dont je suis le plus fier d'avoir participé ! 😎
     </p>
   </div>
-`],
+`]
     }
   },
   {
@@ -115,49 +107,58 @@ const projects = [
     competence: {
       global: [`
   <div>
-    <h2 class="text-xl text-yellow-400 font-bold mb-1 text-center">Application Web développée avec Java Spring & Vue.js</h2>
+    <h2 class="text-xl text-yellow-400 font-bold mb-1 text-center">Application Web – Projet GSB (Java Spring & Vue.js)</h2>
+
     <p>
-      Cette application web a été développée dans le but de fournir une solution complète permettant de gérer un ensemble d'opérations courantes au sein d'une organisation fictive. L'application est structurée selon une architecture client-serveur, où le backend est implémenté en <strong class="text-blue-500">Java Spring</strong> et le frontend en <strong class="text-green-500">Vue.js</strong>.
+      Cette application web a été conçue pour répondre aux besoins de gestion d'une organisation fictive dans le domaine de l’e-commerce pharmaceutique. Elle repose sur une architecture client-serveur robuste : un backend en <strong class="text-blue-500">Java Spring</strong> et un frontend moderne en <strong class="text-green-500">Vue.js</strong>. Ce projet m’a permis d’aborder un grand nombre de concepts techniques tout en mettant en œuvre les compétences du référentiel BTS SIO, notamment les blocs 1, 4, 5 et 6.
     </p>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4">Concepts abordés :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 1 – Gérer le patrimoine informatique</h3>
     <ul class="list-disc pl-6 text-white">
-      <li><strong>API RESTful :</strong> Création d’API REST avec Spring Boot, permettant une communication sécurisée entre le frontend Vue.js et le backend. Implémentation de routes HTTP telles que GET, POST, PUT, DELETE pour la gestion des ressources.</li>
-      <li><strong>Spring Security :</strong> Mise en place d'un système de sécurité basé sur <strong class="text-blue-500">Spring Security</strong> avec des mécanismes d’authentification et d’autorisation (JWT) pour sécuriser les endpoints de l’API.</li>
-      <li><strong>Gestion de l'état côté frontend :</strong> Utilisation de <strong class="text-green-500">Pinia</strong> (équivalent moderne de Vuex) pour la gestion d’état centralisée et fluide entre les composants Vue.js.</li>
-      <li><strong>Base de données relationnelle :</strong> Conception de schémas relationnels en <strong>MySQL</strong>, intégration avec <strong class="text-blue-500">Spring JDBC</strong>, et création de requêtes SQL personnalisées pour des opérations plus ou moins complexes</li>
-      <li><strong>Modularisation du code :</strong> Architecture MVC au backend et découpage avec quelques composantés réutilisables côté frontend avec Vue.js 3.</li>
+      <li><span class="underline">Recenser et identifier les ressources numériques</span> : Mise en place d’un système de gestion des utilisateurs, rôles et permissions à travers des entités et des tables SQL clairement structurées via une MCD créée en amont.</li>
+      <li><span class="underline">Mettre en place et vérifier les niveaux d’habilitation associés à un service</span> : Configuration fine des endpoints sécurisés avec <strong>Spring Security</strong> et JWT, permettant un contrôle d'accès par rôle.</li>
+      <li><span class="underline">Vérifier les conditions de continuité d’un service informatique</span> : Réflexion autour de la saturation des API (concept de load balancer entrevu).</li>
+      <li><span class="underline">Gérer les sauvegardes</span> : Versionnage des stages de l'application via Git.</li>
+      <li><span class="underline">Vérifier le respect des règles d'utilisation des ressources numériques</span> : Implémentation de CGU fictives</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4">Compétences du référentiel mises en œuvre :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 4 – Travailler en mode projet</h3>
     <ul class="list-disc pl-6 text-white">
-      <li><strong>Gérer le patrimoine informatique :</strong> Mise en place de systèmes de gestion des utilisateurs, des rôles et des droits d’accès en utilisant Spring Security avec JWT.</li>
-
-      <li><strong>Répondre aux incidents et aux demandes d'assistance et d'évolution :</strong> Création d’une interface utilisateur dynamique permettant de soumettre des incidents ou demandes d’évolution, enregistrés en base de données avec suivi en temps réel via WebSockets.</li>
-
-      <li><strong>Travailler en mode projet :</strong> Respect des méthodologies agiles avec gestion des tâches via <strong>Asana</strong>. Collaboration en équipe avec pull requests, revues de code, et intégration continue automatisée.</li>
-
-      <li><strong>Mettre à disposition des utilisateurs un service informatique :</strong> Rédaction de spec technique afin de guider le développeur et l'utilisateur pour faire marcher l'application</li>
-
-      <li><strong>Organiser son développement professionnel :</strong> Veille technologique régulière pour intégrer des bonnes pratiques modernes dans le développement web (ex : utilisation de JWT pour la sécurité, mise en place d’intercepteurs Axios pour la gestion des tokens côté frontend).</li>
+      <li><span class="underline">Analyser les objectifs et les modalités d’organisation d’un projet</span> : Définition des fonctionnalités principales (authentification, panier, gestion produits, commentaires) selon un cahier des charges fourni.</li>
+      <li><span class="underline">Planifier les activités</span> : Répartition des tâches via <strong>Asana</strong>, organisation en sprints hebdomadaires pour respecter un calendrier réaliste.</li>
+      <li><span class="underline">Évaluer les indicateurs de suivi d’un projet et analyser les écarts</span> : Suivi des avancements via commits Git et revues de code. J’ai pu évaluer ce que je faisais bien et les zones où je perdais du temps.</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4">Technologies utilisées :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 5 – Mettre à disposition des utilisateurs un service informatique</h3>
+    <ul class="list-disc pl-6 text-white">
+      <li><span class="underline">Réaliser les tests d’intégration et d’acceptation d’un service</span> : Tests manuels sur Postman côté API, scénarios de test sur les composants Vue pour valider les interactions utilisateur.</li>
+      <li><span class="underline">Déployer un service</span> : Déploiement en local via <strong>Docker Compose</strong> était initialement prévu mais l'outils étant relativement complexe, l'idée a été abandonnée</li>
+      <li><span class="underline">Accompagner les utilisateurs dans la mise en place d’un service</span> : Rédaction d’un guide utilisateur pour expliquer les rôles, la navigation, et les cas d’usage principaux.</li>
+    </ul>
+
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 6 – Organiser son développement professionnel</h3>
+    <ul class="list-disc pl-6 text-white">
+      <li><span class="underline">Mettre en place son environnement d’apprentissage personnel</span> : J’ai utilisé ce projet comme support pour apprendre Spring Security, la gestion JWT, la structure MVC, les API, les concepts d'architecture, les librairies de style...</li>
+      <li><span class="underline">Mettre en œuvre des outils et stratégies de veille informationnelle</span> : Lecture de documentation officielle et veille/apprentissage sur les bonnes pratiques de structure d’API REST via newsletter</li>
+      <li><span class="underline">Gérer son identité professionnelle</span> : Ce projet est documenté dans mon portfolio. Il représente une brique importante de mon identité tech, montrant que je sais développer une vraie app fullstack sécurisée.</li>
+      <li><span class="underline">Développer son projet professionnel</span> : Ce projet m'a permis d'aller plus loin que la simple volonté de me spécialiser dans le front. Il a embelli ce que j'appréciais déjà et m'a permis de découvrir des choses pour lesquelles j'ignorais mon appétence : bonjour le backend</li>
+    </ul>
+
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Technologies utilisées</h3>
     <ul class="list-disc pl-6 text-white">
       <li><strong>Backend :</strong> Java Spring (Spring Boot, Spring Security, Spring Data JDBC)</li>
       <li><strong>Frontend :</strong> Vue.js 3, Pinia, Axios</li>
       <li><strong>Base de données :</strong> MySQL</li>
-      <li><strong>Outils de gestion de projet :</strong> GitHub, Asana</li>
+      <li><strong>Outils :</strong> Asana, GitHub, Docker, Postman</li>
     </ul>
-    <p class="text-white">
-      Cette application a permis de couvrir un large éventail de concepts techniques, tout en mettant en œuvre des compétences essentielles du référentiel de formation. En alliant une architecture sécurisée à un frontend performant, ce projet représente une synthèse pratique de mes compétences en développement d’applications web.
-    </p>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Conclusion : </h3><p class="mt-4 text-white">Ce projet représente un réel step-up en terme de bagage de compétences. J'ai pu entrevoir le spectre entier d'une application, de sa conception via Figma ou du Wireframing, en passant par son intégration front ainsi que la conception côté serveur et base de données sans oublier la conception et l'essence même du web : la communication via des protocoles et les API. C'est un véritable apport qui m'a permis d'appréhender les projets d'entreprise avec beaucoup plus de serennité ! </p>
   </div>
 `],
+
     },
     seeMore: {
-      githubFront: 'https://github',
-      githubBack: 'https://github'
+      githubFront: 'https://github.com/CyrilUO/GSB-ECOMMERCE-FRONT',
+      githubBack: 'https://github.com/CyrilUO/GSB-ECOMMERCE-BACKEND'
     },
   },
   {
@@ -170,53 +171,56 @@ const projects = [
       global: [`
   <div>
     <h2 class="text-xl text-yellow-400 text-center font-bold mb-4">Portfolio Personnel - Organisation du Développement Professionnel</h2>
-
     <p>
-      Ce portfolio a été conçu dans le but de centraliser et de présenter l'ensemble de mon parcours éducatif, mes compétences techniques et professionnelles acquises durant mes deux années d'études, ainsi que les projets auxquels j'ai participé. Ce projet, développé en <strong class="text-green-500">Vue.js</strong> et hébergé sur <strong class="text-blue-500">GitHub Pages</strong>, permet de structurer efficacement ma présence en ligne en tant que futur professionnel du développement informatique.
+      Ce portfolio a été pensé comme un projet personnel structurant, avec l’objectif de mettre en lumière mon parcours éducatif, mes compétences techniques, et les projets qui ont jalonné ma formation. Il m’a aussi permis de prendre du recul sur mon évolution, de clarifier mon projet professionnel, et de poser les bases de ma présence en ligne en tant que futur développeur. Développé en <strong class="text-green-500">Vue.js</strong> et hébergé sur <strong class="text-blue-500">GitHub Pages</strong>, il m’a servi à la fois d’outil d’apprentissage et de vitrine professionnelle.
     </p>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Objectifs du Projet :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 6 – Organiser son développement professionnel</h3>
     <ul class="list-disc pl-6 text-white">
-      <li>Créer une plateforme dynamique, responsive et accessible permettant de mettre en avant mes compétences et mon parcours.</li>
-      <li>Utiliser les technologies modernes du web pour construire une interface ergonomique et attrayante.</li>
-      <li>Mettre en place une structure modulaire permettant d'ajouter ou de modifier facilement des sections (parcours, compétences, projets, etc.).</li>
-      <li>Valoriser mon identité professionnelle en ligne grâce à une présentation soignée et cohérente.</li>
+      <li><span class="underline">Mettre en place son environnement d’apprentissage personnel</span> : J’ai choisi de construire ce portfolio en utilisant des technologies que j’avais envie de maîtriser, comme <strong class="text-green-500">Vue.js</strong> et <strong>Tailwind CSS</strong>. Cela m’a permis de progresser concrètement dans la création d’interfaces modernes et responsives, tout en gagnant en autonomie sur la partie intégration.
+      </li>
+
+      <li class="mt-2"><span class="underline">Mettre en œuvre des outils et stratégies de veille informationnelle</span> : En parallèle du développement, j’ai mis en place une veille régulière via la documentation officielle des frameworks, des newsletters spécialisées, et des discussions sur GitHub ou Reddit. J’ai aussi suivi l’évolution de Vue.js et de ses écosystèmes pour rester à jour.
+      </li>
+
+      <li class="mt-2"><span class="underline">Gérer son identité professionnelle</span> : Le portfolio centralise l’ensemble de mes compétences et expériences de façon claire. J’y ai intégré un CV téléchargeable, une section "À propos de moi", et surtout un espace projets où je décris concrètement ce que j’ai réalisé (techno utilisées, rôle joué, compétences mobilisées). C’est un outil que je peux maintenant envoyer lors de candidatures ou montrer en entretien.
+      </li>
+
+      <li class="mt-2"><span class="underline">Développer son projet professionnel</span> : Le simple fait de créer ce site m’a permis de mieux cerner mes aspirations. J’ai pris conscience de mes points forts, des domaines que j’aime explorer, et du type de développeur que je veux devenir. La section "veille technologique" que j’ai ajoutée reflète aussi mon intérêt croissant pour les frameworks frontend, qui m'ont donné envie de m'investir encore plus dans ce domaine.
+      </li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Compétences mises en œuvre :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Objectifs du projet</h3>
     <ul class="list-disc pl-6 text-white">
-      <li><strong>Mettre en place un environnement d'apprentissage personnel :</strong>
-        Création du portfolio sur une base solide de connaissances acquises en <strong class="text-green-500">Vue.js</strong>, avec intégration de bibliothèques modernes telles que <strong>Tailwind CSS</strong> pour le style.</li>
-      <li><strong>Mettre en œuvre des outils et stratégies de veille informationnelle :</strong>
-        Utilisation de GitHub pour le versionnement et la publication continue du site grâce à <strong class="text-blue-500">GitHub Pages</strong>. Suivi des évolutions technologiques en consultant la documentation officielle et des forums spécialisés.</li>
-      <li><strong>Gérer son identité professionnelle :</strong>
-        Présentation claire et cohérente de mes compétences, projets réalisés, parcours éducatif et expériences diverses. Intégration de mon CV téléchargeable et mise en avant de mes principaux projets académiques.</li>
-      <li><strong>Développer son projet professionnel :</strong>
-        Structuration de mon portfolio de manière à refléter mes compétences techniques, ma progression au cours des deux années de formation, et mes projets concrets. Ce portfolio sert également de support pour les candidatures professionnelles et les entretiens.</li>
+      <li>Créer une plateforme responsive et accessible pour présenter mes compétences et projets.</li>
+      <li>Utiliser des technologies modernes du web pour construire une interface élégante et professionnelle.</li>
+      <li>Permettre une évolutivité du contenu en rendant chaque section modifiable et réutilisable.</li>
+      <li>Valoriser mon profil auprès des recruteurs et de mon réseau professionnel.</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Structure du Portfolio :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Structure du portfolio</h3>
     <ul class="list-disc pl-6 text-white">
-      <li><strong>Page d'accueil :</strong> Introduction brève, présentation de mon profil et de mon objectif professionnel.</li>
-      <li><strong>Section "Compétences" :</strong> Recensement de toutes les compétences acquises durant mes études, organisées par catégories (Développement web, Backend, Gestion de projet, etc.).</li>
-      <li><strong>Section "Projets" :</strong> Liste détaillée des projets auxquels j'ai participé avec une description complète, les technologies utilisées et des liens vers le code source ou les démonstrations si disponibles.</li>
-      <li><strong>Section "Parcours éducatif" :</strong> Présentation de mon cursus scolaire, des diplômes obtenus, et des formations spécifiques suivies.</li>
-      <li><strong>Section "À propos de moi" :</strong> Présentation personnelle, CV téléchargeable, et possibilité de me contacter.</li>
-      <li><strong>Section "Veille Technologique" :</strong>Présentation d'un petit article lié à mon atrait pour les frameworks frontend qui m'ont permis de me lancer de manière plus professionnelle dans le développeur web</li>
+      <li><strong>Accueil :</strong> Introduction et objectifs professionnels.</li>
+      <li><strong>À propos de moi :</strong> Infos personnelles, CV en téléchargement, contact.</li>
+      <li><strong>Parcours éducatif :</strong> Diplômes, formations, et certifications obtenus.</li>
+      <li><strong>Compétences :</strong> Classement par catégorie des savoir-faire acquis en formation.</li>
+      <li><strong>Projets :</strong> Présentation détaillée de projets réalisés, avec explication des apports.</li>
+      <li><strong>Veille technologique :</strong> Un article écrit sur les frameworks frontend du moment</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Technologies utilisées :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Technologies utilisées</h3>
     <ul class="list-disc pl-6 text-white">
       <li><strong>Frontend :</strong> Vue.js, Tailwind CSS</li>
       <li><strong>Déploiement :</strong> GitHub Pages</li>
-      <li><strong>Versionnage de code :</strong> Git, GitHub</li>
+      <li><strong>Versionnage :</strong> Git, GitHub</li>
     </ul>
 
-    <p class="text-white">
-      Bien que simple d'un point de vue visuel, ce projet de portfolio est représente une grande satisfaction et un premier pas afin d'arriver à une insertion profesionnelle perenne. Il est le fruit de ma volonté d'apprendre de nouvelles choses jour après jour afin de participer à des projets de plus en plus stimulants.
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Conclusion :</h3><p class="mt-4 text-white">
+      Bien que ce projet soit simple dans sa forme, il a eu un grand impact pour moi. Il m’a permis de synthétiser deux années de formation, de prendre du recul, et de poser les premières pierres de mon image professionnelle. Il symbolise mon envie de progresser chaque jour et de participer, demain, à des projets concrets et stimulant ! ;)
     </p>
   </div>
 `],
+
 
     }
   },
@@ -232,51 +236,56 @@ const projects = [
     <h2 class="text-xl text-yellow-400 font-bold text-center mb-4">Projet Adveo - Participation à un Projet d'Envergure</h2>
 
     <p>
-      Ce projet représente ma première participation à un projet d'envergure au sein de mon entreprise dans laquelle je suis en alternances <strong class="text-blue-500">Delaware</strong>. <br> J'ai été intégré dans une équipe travaillant sur le développement et la maintenance d'une solution e-commerce basée sur <strong class="text-green-500">SAP Commerce (Hybris)</strong>.
-      Ce projet m'a permis d’acquérir une expérience significative dans l’exploitation de technologies modernes, la manipulation de bases de données volumineuses, et la collaboration en équipe selon des méthodologies agiles.
+      Ce projet représente ma première véritable immersion dans un projet d'envergure, au sein de mon entreprise d’alternance <strong class="text-blue-500">Delaware</strong>. J’ai eu la chance d’intégrer une équipe travaillant sur la maintenance et l’évolution d’une plateforme e-commerce développée sous <strong class="text-green-500">SAP Commerce (Hybris)</strong>.
+    </p>
+    <p class="mt-2">
+      C’était une expérience intense et enrichissante où j’ai pu découvrir concrètement le quotidien d’un projet agile en entreprise, tout en montant rapidement en compétence sur des technologies et des process exigeants.
     </p>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Compétences mises en œuvre :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 2 – Répondre aux incidents et aux demandes d’assistance et d’évolution</h3>
     <ul class="list-disc pl-6 text-white">
-      <li><strong>Répondre aux incidents et aux demandes d’assistance et d’évolution :</strong></li>
-      <ul class="list-disc pl-6 text-white">
-        <li><strong>J'ai pu collecter et suivre demandes :</strong> Identification des problèmes rencontrés par les utilisateurs du système e-commerce (ex : anomalies dans les processus de commande, erreurs d’affichage des produits, de boutons etc ... )</li>
-        <li><strong>J'ai pu traiter des demandes concernant les services de système de base de données:</strong> Intervention sur des configurations spécifiques dans l’environnement <strong class="text-green-500">SAP Commerce (Hybris)</strong>, en particulier dans la consultation de produits via Flexible Search et console HAC.</li>
-        <li><strong>Traiter des demandes concernant les applications :</strong> Implémentation de correctifs mineurs en <strong class="text-yellow-400">JavaScript</strong> pour améliorer l’interface utilisateur et corriger des comportements inattendus dans le frontend.</li>
-        <li><strong>J'ai également pu participer aux demandes d’évolution :</strong> Contribution à l’ajout de nouvelles fonctionnalités en collaboration avec les dev front, back, UX designer, tout en assurant la compatibilité avec les standards de l’entreprise et la demande client.</li>
-      </ul>
+      <li><span class="underline">Collecter, suivre et orienter des demandes</span> : J’ai pu identifier des dysfonctionnements rencontrés par les utilisateurs sur la plateforme e-commerce (ex. boutons non fonctionnels, problèmes d’affichage, erreurs dans les parcours de commande). Ces remontées étaient centralisées, suivies et analysées au sein de notre backlog.</li>
 
-      <li class="mt-4"><strong>Travailler en mode projet :</strong></li>
-      <ul class="list-disc pl-6 text-white">
-        <li><strong>Analyser les objectifs et les modalités d’organisation d’un projet :</strong> Compréhension des besoins spécifiques de <strong class="text-blue-500">Adveo</strong> en matière de gestion e-commerce, et analyse des différentes phases de développement nécessaires pour atteindre les objectifs fixés.</li>
-        <li><strong>Planifier les activités :</strong> Participation à des réunions de planification hebdomadaires basées sur les méthodes agiles (Scrum), au cours desquelles les tâches étaient priorisées selon leur urgence et leur importance.</li>
-        <li><strong>J'ai pu évaluer (par simple regard) les indicateurs de suivi du projet et analyser les écarts :</strong> Suivi des tâches attribuées via des outils de gestion de projet (ex : depuis Azure) et analyse des écarts entre les prévisions et les réalisations.</li>
-        <li><strong>J'ai pu travailler au sein d'une équipe :</strong> Interaction régulière avec les développeurs backend, frontend, et responsables produit pour s'assurer que les nouvelles fonctionnalités répondent aux exigences initiales. Nous avions des réunions "informelles" tous les lundi pour connaitre l'avancée du projet.</li>
-      </ul>
+      <li><span class="underline">Traiter des demandes concernant les services réseau et système applicatifs</span> : J’ai exploré et modifié des configurations internes via la console HAC et le système FlexibleSearch d'Hybris pour analyser et améliorer les performances de certaines requêtes métiers sur des bases volumineuses.</li>
+
+      <li><span class="underline">Traiter des demandes concernant les applications</span> : J’ai développé de petits correctifs en <strong class="text-yellow-400">JavaScript</strong> pour le frontend (comportements de composants, affichage dynamique), ce qui m’a permis d’avoir un réel impact visible sur l’UX du site. </li>
+
+      <li><span class="underline">Participer à des demandes d'évolution</span> : J’ai aussi été impliqué dans la mise en place de nouvelles fonctionnalités, avec les devs front, back, les PO et UX designers, afin de faire évoluer le site selon les attentes du client.</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Technologies utilisées :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Bloc 4 – Travailler en mode projet</h3>
+    <ul class="list-disc pl-6 text-white">
+      <li><span class="underline">Analyser les objectifs et les modalités d’organisation d’un projet</span> : En début de sprint, nous analysions collectivement les tickets issus du backlog. J’ai pu comprendre le lien entre les besoins fonctionnels du client (ex. amélioration du tunnel de commande) et les tâches techniques à prévoir dans le sprint.</li>
+
+      <li><span class="underline">Planifier les activités</span> : Chaque semaine, nous avions une réunion de planification où les tâches étaient estimées, priorisées et réparties selon les ressources. J’ai participé activement à ces réunions, ce qui m’a aidé à mieux comprendre la logique de découpage, de charge et de priorisation des stories.</li>
+
+      <li><span class="underline">Évaluer les indicateurs de suivi et analyser les écarts</span> : Je suivais l’évolution de mes tickets dans <strong>Azure</strong>. Même si je ne gérais pas directement les KPI, j’observais régulièrement les écarts entre ce qui était prévu et ce qui était réellement réalisé. Ce suivi m’a sensibilisé aux imprévus et à l’importance de la communication continue dans l’équipe.</li>
+
+      <li><span class="underline">Collaborer au sein d’une équipe</span> : Nous faisions un point chaque lundi pour voir où chacun en était. Ce cadre bienveillant m’a permis de poser des questions, de partager mes avancées ou mes blocages, et de progresser beaucoup plus vite que seul.</li>
+    </ul>
+
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Technologies utilisées :</h3>
     <ul class="list-disc pl-6 text-white">
       <li><strong>Backend :</strong> SAP Commerce (Hybris), Java</li>
       <li><strong>Frontend :</strong> JavaScript, JSP</li>
-      <li><strong>Base de données :</strong> SQL (manipulation de données volumineuses dans des bases complexes)</li>
-      <li><strong>Méthodologie :</strong> Agile (Scrum) - Participation aux sprint meetings, daily stand-ups et revues de sprint.</li>
-      <li><strong>Outils de gestion de projet :</strong> Azure</li>
+      <li><strong>Base de données :</strong> FlexibleSearch / SQL sur de grands volumes</li>
+      <li><strong>Gestion de projet :</strong> Méthode Agile (Scrum) – Outils : Azure DevOps</li>
     </ul>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Points marquants du projet :</h3>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Points marquants du projet :</h3>
     <ul class="list-disc pl-6 text-white">
-      <li>Découverte et prise en main de <strong class="text-green-500">SAP Commerce (Hybris)</strong>, une solution e-commerce puissante utilisée par de nombreuses grandes entreprises.</li>
-      <li>Premières contributions en <strong class="text-yellow-400">JavaScript</strong> sur une application en production, ce qui m'a permis de mieux comprendre les bonnes pratiques de développement.</li>
-      <li>Compréhension des requêtes SQL complexes appliquées à de vastes bases de données, pour le suivi et l’amélioration des processus métiers.</li>
-      <li>Expérience concrète du travail en équipe avec une méthodologie agile (Scrum), en participant activement aux réunions de planification, aux sprints et aux revues de projet.</li>
+      <li>J’ai découvert en profondeur <strong>SAP Commerce (Hybris)</strong> et ses particularités, notamment la gestion des données produit et des règles métiers complexes.</li>
+      <li>J’ai écrit mes premières lignes de code <strong>JavaScript</strong> en production, ce qui m’a permis de comprendre la rigueur nécessaire quand on code pour des utilisateurs réels.</li>
+      <li>J’ai manipulé des bases de données massives et appris à lire et ajuster des requêtes complexes.</li>
+      <li>Enfin, j’ai compris la logique des <strong>sprints</strong>, des livrables à date, et des attentes fortes que cela implique dans un projet IT.</li>
     </ul>
 
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Conclusion :</h3>
     <p class="mt-4 text-white">
-      Ce projet m'a permis de m'immerger dans un environnement professionnel exigeant où j'ai pu développer mes compétences techniques et collaboratives. J'ai également pu comprendre les processus de maintenance et d'évolution d'une application complexe, en respectant des contraintes de sécurité, de performance et de qualité. Bien qu'impressionnant cette immersion m'a permis de comprendre les attentes et les obligations relatives aux contraintes temporelles avec des sprints parfois plus intenses que d'autres liés aux livraisons. Cette première participation a véritablement été le tremplin "technique" de mon apprentissage.
+      Ce projet a vraiment été un tournant : il m’a permis de comprendre ce que signifie travailler sur un projet professionnel réel, dans un environnement structuré, avec une vraie équipe et de vraies responsabilités. C’est là que j’ai pris conscience de l’importance de la rigueur, de l’organisation… et aussi du plaisir de voir ses contributions intégrées et utilisées en production.
     </p>
   </div>
-`],
+`]
 
     }
   },
@@ -290,55 +299,56 @@ const projects = [
     competence: {
       global: [`
   <div>
-    <h2 class="text-xl text-yellow-400 font-bold text-center">Développement de la présence en ligne de l'organisation</h2>
-
     <p>
-      Lors de notre parcours à l'<span class="font-bold text-yellow-500">AFIP Formations</span>, nous avons pu suivre un module de développement web centré sur l'impact du référencement et son implémentation au sein d'un site web. Ce travail a permis de mettre en œuvre une stratégie visant à améliorer la visibilité en ligne de l'organisation tout en respectant les critères techniques imposés par les moteurs de recherche comme <span class="text-blue-400 font-bold">Google</span>.
+      Lors de notre parcours à l'<span class="font-bold text-yellow-500">AFIP Formations</span>, nous avons suivi un module de développement web centré sur l’impact du référencement (SEO) et son implémentation dans un site web. Ce module nous a permis de mettre en œuvre de concrètes stratégoes visant à améliorer la visibilité en ligne de l’organisation, en répondant aux exigences des moteurs de recherche comme <span class="text-blue-400 font-bold">Google</span>.
     </p>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Valorisation de l'image de l'organisation</h3>
-    <p>
-      Pour valoriser l'image de l'organisation sur les médias numériques, nous avons mis en place une <strong class="underline text-pink-500">charte graphique cohérente</strong> garantissant une identité visuelle homogène et attractive.
-      Celle-ci comprend l'utilisation de codes couleurs spécifiques, de typographies adaptées, et d'une structure responsive visant à offrir une navigation intuitive à tous les utilisateurs, quels que soient leurs supports (ordinateur, tablette, mobile).
-      Cette identité visuelle contribue à renforcer la crédibilité de l'organisation sur le web et à améliorer l'expérience utilisateur (UX), un critère pris en compte par les algorithmes de classement de <span class="text-blue-400 font-bold">Google</span>.
-    </p>
+    <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Compétences du référentiel mises en œuvre :</h3>
+    <ul class="list-disc pl-6 text-white">
+      <li><strong>Bloc 3 : Développer la présence en ligne de l'organisation</strong>
+        <ul class="list-disc pl-6 mt-2 text-white">
+          <li><span class="underline space-mono-regular-italic">Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</span> :
+            <p>
+              Nous avons pu comprendre cmment une <strong class="text-yellow-400">charte graphique cohérente</strong> permet de garantir une identité visuelle forte et professionnelle pour une entreprise ou un particulier. Cette charte graphique uniformise les process au sein d'une entreprise notamment au travers d'éléments tels que palette de couleurs, typographie, et structure responsive pour assurer une navigation fluide sur tous les appareils. Cette identité contribue à la crédibilité de l'organisation et à l’optimisation de l’expérience utilisateur (UX), facteur déterminant pour le référencement selon les algorithmes de <span class="text-blue-400 font-bold">Google</span>.
+            </p>
+          </li>
 
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Référencement des services en ligne</h3>
-    <p>
-      Le référencement (SEO - Search Engine Optimization) est un aspect essentiel pour améliorer la visibilité d'un site web sur les moteurs de recherche. Pour atteindre cet objectif, nous avons utilisé une série d’outils spécialisés tels que <strong class="text-blue-500">GTmetrix</strong> et <strong class="text-purple-500">Wappalyzer</strong> :
-    </p>
-    <ul class="list-disc pl-5 mt-2">
-      <li><strong class="text-blue-500">GTmetrix :</strong> Analyse de la performance du site en termes de vitesse de chargement, d’optimisation des images, de mise en cache, et de réduction du JavaScript/CSS. Ces optimisations techniques améliorent directement l’accessibilité du site pour les utilisateurs et son classement par les moteurs de recherche.</li>
-      <li><strong class="text-purple-500">Wappalyzer :</strong> Identification des technologies utilisées sur un site web (CMS, frameworks, plugins SEO, etc.) pour garantir la conformité aux standards de référencement actuels.</li>
+          <li><span class="underline space-mono-regular-italic">Référencer les services en ligne de l'organisation et mesurer leur visibilité</span> :
+            <p>
+              Nous avons appris à mettre en œuvre une stratégie de référencement naturel (SEO) et à en mesurer l’efficacité grâce à des outils comme <strong class="text-blue-500">GTmetrix</strong> et <strong class="text-purple-500">Wappalyzer</strong> :
+            </p>
+            <ul class="list-disc pl-5 mt-2">
+              <li><strong class="text-blue-500">GTmetrix</strong> : analyse des performances techniques (chargement, optimisation des images, mise en cache, minification).</li>
+              <li><strong class="text-purple-500">Wappalyzer</strong> : identification des technologies (CMS, plugins SEO, frameworks) pour valider la conformité technique.</li>
+            </ul>
+            <p>
+              Nous avons également travaillé avec <strong class="text-yellow-400">Yoast SEO</strong>, un plugin WordPress essentiel pour optimiser les balises HTML, les méta-descriptions, la structure des URL, et le contenu selon les critères SEO.
+            </p>
+          </li>
+
+          <li><span class="underline space-mono-regular-italic">Participer à l'évolution d'un site web exploitant les données de l'organisation</span> :
+            <p>
+              En analysant les données issues des outils comme GTmetrix, nous avons identifié les zones à améliorer (ex. lenteur, taille d’image). L’évolution du site a été guidée par des données mesurables, permettant d’implémenter des optimisations ciblées.
+            </p>
+            <p>
+              Nous avons ainsi pu tester différentes approches de structure de page, mesurer l’impact sur le référencement, et ajuster la stratégie en continu pour une amélioration progressive de la visibilité en ligne.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul> <h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Critères pris en compte par Google :</h3>
+    <ul class="list-disc pl-6 text-white">
+      <li><strong class="text-yellow-400">La pertinence des mots-clés</strong> : Choix et positionnement stratégique dans les titres, paragraphes et URL.</li>
+      <li><strong class="text-yellow-400">La qualité des backlinks</strong> : Liens entrants issus de sources fiables.</li>
+      <li><strong class="text-yellow-400">L’expérience utilisateur (UX)</strong> : Optimisation du temps de chargement, design responsive, hiérarchisation claire des contenus.</li>
+      <li><strong class="text-yellow-400">Le contenu frais et mis à jour régulièrement</strong> : Favorisé dans le classement des résultats de recherche.</li>
     </ul>
-
-    <p>
-      En termes de mise en œuvre, nous avons réalisé des tâches pratiques d'amélioration du référencement en utilisant le plugin <strong class="text-yellow-400">Yoast SEO</strong> de <strong class="text-yellow-400">WordPress</strong>, un CMS largement adopté et reconnu pour ses performances en matière de référencement naturel.
-      <strong class="text-yellow-400">Yoast SEO</strong> permet d’optimiser chaque page ou article selon des critères de SEO tels que l’utilisation de balises HTML (titre, méta-description), la structure des URL, la lisibilité du contenu, et l’optimisation des mots-clés.
-    </p>
-
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Exploitation des données du site web</h3>
-    <p>
-      Pour améliorer continuellement la présence en ligne de l'organisation, nous avons utilisé les données issues de l'analyse du site web.
-      Cela inclut l’exploitation des rapports générés par <strong class="text-blue-500">GTmetrix</strong> pour identifier les zones à optimiser, et par <strong class="text-purple-500">Wappalyzer</strong> pour garantir la compatibilité avec les standards technologiques modernes.
-    </p>
-    <p>
-      En parallèle, nous avons également mesuré l’impact des modifications apportées grâce aux outils d’analyse intégrés, ce qui nous a permis de valider les améliorations effectuées et d'affiner la stratégie de référencement en fonction des données collectées.
-    </p>
-
-    <h3 class="text-lg text-yellow-400 font-bold mt-4 mb-2">Critères pris en compte par Google :</h3>
-    <ul class="list-disc pl-5 mt-2">
-      <li><strong class="text-yellow-400">La pertinence des mots-clés :</strong> Identification des termes les plus recherchés, optimisation de leur placement et de leur fréquence au sein des pages.</li>
-      <li><strong class="text-yellow-400">La qualité des liens entrants (backlinks) :</strong> Obtention de liens de qualité qui témoignent de la popularité et de la fiabilité du site.</li>
-      <li><strong class="text-yellow-400">L'expérience utilisateur :</strong> Amélioration de la vitesse de chargement, réduction du taux de rebond, et compatibilité mobile.</li>
-      <li><strong class="text-yellow-400">Le contenu frais et régulièrement mis à jour :</strong> Priorisation par <span class="text-blue-400 font-bold">Google</span> des contenus dynamiques et pertinents.</li>
-    </ul>
-
-    <p class="mt-4 text-white">
-      Grâce à ces outils et méthodologies, nous avons pu optimiser nos projets pour répondre efficacement aux critères de référencement et améliorer leur visibilité sur le web, tout en assurant une présence en ligne cohérente, pérenne et mesurable.
+<h3 class="text-lg text-yellow-400 font-bold mt-6 mb-2">Conclusion : </h3><p class="text-white">
+      Grâce à ce module et à la mise en pratique via des outils concrets, nous avons pu développer un site web respectant les bonnes pratiques SEO, tout en assurant une présence en ligne professionnelle, durable et mesurable.
     </p>
   </div>
 `],
+
 
     }
   },

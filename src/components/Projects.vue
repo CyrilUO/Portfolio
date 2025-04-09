@@ -2,7 +2,7 @@
 import FadeIn from './FadeIn.vue'
 import gsbProject from "@/assets/images/gsb-photo-project.png"
 import portfolio from "@/assets/images/portfolio.png"
-import langchain from "@/assets/images/Langchain.png"
+import langchain from "@/assets/images/langchain-g.webp"
 import {useRouter} from "vue-router";
 import Buttons from "@/components/common/buttons.vue";
 import sap from "@/assets/images/sap.png"
@@ -24,10 +24,10 @@ const projects = [
   {
     id: 1,
     title: 'Agentic IA',
-    description: 'Implémentation de framework IA permettant de contraindre les LLM à répondre selon des structures de données définies   ',
+    description: 'Implémentation de framework IA permettant de contraindre les LLM à répondre selon des structures de données définies',
     tech: ['FastAPI', 'Langchain', 'Langraph', 'Langfuse', 'Pydantic', 'Python'],
     image: langchain,
-    seeMore: 'https://example-weather.com'
+    seeMore: {}
   },
   {
     id: 2,

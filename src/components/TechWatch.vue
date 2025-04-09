@@ -18,7 +18,7 @@ const articles = [
 <template>
   <div class="bg-white py-1"></div>
 
-  <section id="tech-watch" class="bg-black min-h-screen mx-4">
+  <section id="tech-watch" class="bg-black mx-4">
     <FadeIn>
       <div class="max-w-7xl mx-auto py-8">
         <h2 class="text-4xl font-bold text-center text-yellow-400 mb-2">
