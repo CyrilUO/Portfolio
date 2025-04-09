@@ -68,7 +68,7 @@ const projects = [
       <li><strong>Travailler en mode projet :</strong>
         <ul class="list-disc pl-6 text-white">
           <li><span class="underline">Analyser les objectifs et les modalités d'organisation d'un projet</span> : Définition des objectifs du projet en collaboration avec l’équipe via Microsoft Loop.</li>
-          <li><span class="underline">Plannifier les activités</span> : Utilisation d’outils de gestion de projet (GitHub) pour planifier les tâches et suivre les progrès.</li>
+          <li><span class="underline">Plannifier les activités</span> : Utilisation d’outils de gestion de projet (Azure) pour planifier les tâches et suivre les progrès.</li>
           <li><span class="underline">Evaluer les indicateurs de suivi d'un projet et analyser les écarts</span> : Réalisation de rapports réguliers sur l’avancement du projet et les tâches étaient assignés à des dates spécifiques suite au chiffrage des jours passés à travailler sur certaines fonctionnalités</li>
         </ul>
       </li>
@@ -328,7 +328,7 @@ const projects = [
 
           <li><span class="underline space-mono-regular-italic">Participer à l'évolution d'un site web exploitant les données de l'organisation</span> :
             <p>
-              En analysant les données issues des outils comme GTmetrix, nous avons identifié les zones à améliorer (ex. lenteur, taille d’image). L’évolution du site a été guidée par des données mesurables, permettant d’implémenter des optimisations ciblées.
+              Au travers de TP, nous avons dû implémenter ces nouveaux outils pour améliorer le référencement de site mis à disposition en analysant les données issues des outils comme GTmetrix. Nous avons pu identifier les zones à améliorer (ex. lenteur, taille d’image). L’évolution du site a été guidée par des données mesurables, permettant d’implémenter des optimisations ciblées.
             </p>
             <p>
               Nous avons ainsi pu tester différentes approches de structure de page, mesurer l’impact sur le référencement, et ajuster la stratégie en continu pour une amélioration progressive de la visibilité en ligne.
